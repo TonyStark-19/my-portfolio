@@ -80,7 +80,7 @@ export default function LeftSidebar() {
             </nav>
 
             {/* Bottom Footer */}
-            <div className="px-6 pb-3 text-[#444444] text-xs text-left">
+            <div className="px-6 pb-3 text-[#888888] text-xs text-center">
                 Made with ❤️ by Aditya chandel
             </div>
         </aside>
