@@ -45,7 +45,7 @@ export default function Intro() {
                     </button>
 
                     <button className="border border-[#333333] text-white px-8 py-3 rounded-2xl font-semibold hover:bg-[#1a1a1a] transition-all cursor-pointer">
-                        Read Articles
+                        About me
                     </button>
                 </div>
             </div>

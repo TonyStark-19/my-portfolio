@@ -1,26 +1,32 @@
 // import useState from react
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 
 // import icons from react-icons
 import { FaHome, FaRegUser, FaCode, FaProjectDiagram, FaBriefcase } from "react-icons/fa";
 import { IoShareSocialOutline } from "react-icons/io5";
 import { MdOutlineArticle } from "react-icons/md";
 import { IoIosArrowForward } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 // define pages for navigation
 const pages = [
-    { name: "Home", slug: "home", icon: <FaHome /> },
-    { name: "About", slug: "about", icon: <FaRegUser /> },
-    { name: "Skills", slug: "skills", icon: <FaCode /> },
-    { name: "Projects", slug: "projects", icon: <FaProjectDiagram /> },
-    { name: "Experience", slug: "experience", icon: <FaBriefcase /> },
-    { name: "Articles", slug: "articles", icon: <MdOutlineArticle /> },
-    { name: "Connect", slug: "connect", icon: <IoShareSocialOutline /> },
+    { name: "Home", slug: "home", icon: <FaHome />, path: "/home" },
+    { name: "About", slug: "about", icon: <FaRegUser />, path: "/about" },
+    { name: "Skills", slug: "skills", icon: <FaCode />, path: "/skills" },
+    { name: "Projects", slug: "projects", icon: <FaProjectDiagram />, path: "/projects" },
+    { name: "Experience", slug: "experience", icon: <FaBriefcase />, path: "/experience" },
+    { name: "Articles", slug: "articles", icon: <MdOutlineArticle />, path: "/articles" },
+    { name: "Connect", slug: "connect", icon: <IoShareSocialOutline />, path: "/connect" },
 ];
 
 // Left Sidebar Component
 export default function LeftSidebar() {
     const [activeTab, setActiveTab] = useState("home");
+    const location = useLocation();
+
+    // This derived state ensures the sidebar matches the current URL
+    const activePath = location.pathname;
 
     return (
         <aside className="w-80 flex flex-col bg-[#111111] h-screen border-r border-[#222222] sticky top-0">
@@ -47,9 +53,10 @@ export default function LeftSidebar() {
             {/* Navigation */}
             <nav className="flex-1 px-4 space-y-2 overflow-y-auto custom-scrollbar">
                 {pages.map((page) => {
-                    const isActive = activeTab === page.slug;
+                    const isActive = activePath === page.path || (activePath === "/" && page.slug === "home");
                     return (
-                        <button
+                        <Link
+                            to={page.path}
                             key={page.slug}
                             onClick={() => setActiveTab(page.slug)}
                             className={`w-full flex items-center justify-between px-4 py-3.5 rounded-xl transition-all duration-300 group cursor-pointer
@@ -74,7 +81,7 @@ export default function LeftSidebar() {
                                 }`}>
                                 <IoIosArrowForward />
                             </div>
-                        </button>
+                        </Link>
                     );
                 })}
             </nav>

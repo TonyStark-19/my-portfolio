@@ -1,8 +1,14 @@
 // import components
-import Left from "../Components/LeftSidebar"
+import Left from "../Components/LeftSidebar";
 
 // import pages
-import Intro from "./Intro"
+import Intro from "./Intro";
+import Skills from "./Skills";
+import Articles from "./Articles";
+import Connect from "./Connect";
+
+// import routing
+import { Route, Routes } from "react-router-dom";
 
 // Main Page Component
 export default function MainPage() {
@@ -11,7 +17,13 @@ export default function MainPage() {
             <Left />
 
             <div className="flex-1 h-full overflow-y-auto">
-                <Intro />
+                <Routes>
+                    <Route path="/" element={<Intro />} />
+                    <Route path="/home" element={<Intro />} />
+                    <Route path="/skills" element={<Skills />} />
+                    <Route path="/articles" element={<Articles />} />
+                    <Route path="/connect" element={<Connect />} />
+                </Routes>
             </div>
         </div>
     )
