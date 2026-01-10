@@ -25,6 +25,7 @@ export default function Articles() {
             <div className="max-w-5xl mx-auto">
                 {/* Header */}
                 <div className="mb-16">
+                    <h2 className="text-blue-500 font-mono tracking-widest uppercase text-sm mb-4">Articles</h2>
                     <h1 className="text-5xl font-bold tracking-tight mb-4 flex items-center gap-4">
                         <LuPenTool className="text-blue-500" />
                         Writing
@@ -46,7 +47,7 @@ export default function Articles() {
                         >
                             <div className="flex flex-col md:flex-row items-center">
                                 {/* Article Image */}
-                                <div className="w-full md:w-1/3 h-56 overflow-hidden">
+                                <div className="w-full md:w-1/3 h-60 overflow-hidden">
                                     <img
                                         src={article.image}
                                         alt={article.title}

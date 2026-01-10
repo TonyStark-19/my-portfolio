@@ -9,6 +9,7 @@ export default function Skills() {
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <div className="mb-12">
+                    <h2 className="text-blue-500 font-mono tracking-widest uppercase text-sm mb-2">Skills</h2>
                     <h1 className="text-4xl font-bold tracking-tight">Technical Stack</h1>
                     <p className="text-[#888888] mt-2 italic">Tools, languages, and frameworks I use to feed my creativity.</p>
                 </div>

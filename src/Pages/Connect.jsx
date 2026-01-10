@@ -36,6 +36,7 @@ export default function Connect() {
             <div className="max-w-5xl mx-auto">
                 {/* Header */}
                 <div className="mb-16">
+                    <h2 className="text-blue-500 font-mono tracking-widest uppercase text-sm mb-2">Connect</h2>
                     <h1 className="text-5xl font-bold tracking-tight mb-4">Let's Connect</h1>
                     <p className="text-[#888888] text-xl max-w-2xl">
                         I'm always open to discussing new projects, creative ideas, or being part of your visions.

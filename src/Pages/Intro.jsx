@@ -4,6 +4,9 @@ import { GitHubCalendar } from 'react-github-calendar';
 // import icons
 import { LuGithub, LuArrowRight } from "react-icons/lu";
 
+// import link
+import { Link } from 'react-router-dom';
+
 // Intro Page Component
 export default function Intro() {
     // Calculate streak dynamically
@@ -38,15 +41,20 @@ export default function Intro() {
 
                 {/* Call to Action Buttons */}
                 <div className="flex space-x-4 mt-10">
-                    <button className="bg-white text-black px-8 py-3 rounded-2xl font-semibold flex items-center group hover:bg-blue-400
+                    <Link to="/projects">
+                        <button className="bg-white text-black px-8 py-3 rounded-2xl font-semibold flex items-center group hover:bg-blue-400
                         transition-all cursor-pointer">
-                        View Projects
-                        <LuArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-                    </button>
+                            View Projects
+                            <LuArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                        </button>
+                    </Link>
 
-                    <button className="border border-[#333333] text-white px-8 py-3 rounded-2xl font-semibold hover:bg-[#1a1a1a] transition-all cursor-pointer">
-                        About me
-                    </button>
+                    <Link to="/about">
+                        <button className="border border-[#333333] text-white px-8 py-3 rounded-2xl font-semibold hover:bg-[#1a1a1a] transition-all
+                        cursor-pointer">
+                            About me
+                        </button>
+                    </Link>
                 </div>
             </div>
 
