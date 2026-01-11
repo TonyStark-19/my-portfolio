@@ -1,5 +1,8 @@
 // import react icons
-import { LuBriefcase, LuCalendar, LuMapPin, LuExternalLink, LuTrophy, LuCircle } from "react-icons/lu";
+import { LuCalendar, LuMapPin, LuCircle } from "react-icons/lu";
+
+// import component
+import Footer from "../Components/Footer";
 
 // Experience Page Component
 export default function Experience() {
@@ -35,23 +38,23 @@ export default function Experience() {
     ];
 
     return (
-        <div className="w-full min-h-screen bg-[#0a0a0a] text-white p-8 lg:p-24 selection:bg-blue-500/30">
+        <div className="w-full min-h-screen bg-[#0a0a0a] text-white p-8 lg:p-24 selection:bg-blue-500/30 max-lg:pt-30">
             <div className="max-w-4xl mx-auto">
                 {/* Section Title */}
                 <div className="mb-20">
-                    <h2 className="text-sm font-mono tracking-[0.3em] text-blue-500 uppercase mb-4">History</h2>
+                    <h2 className="text-sm font-mono tracking-[0.3em] text-blue-400 uppercase mb-4">History</h2>
                     <h1 className="text-5xl md:text-6xl font-bold tracking-tight">Experience.</h1>
                 </div>
 
                 <div className="relative border-l border-[#222222] ml-4 md:ml-0">
                     {experiences.map((exp, index) => (
-                        <div key={index} className="mb-20 last:mb-0 relative pl-10 md:pl-16 group">
+                        <div key={`${exp.company}-${exp.role}`} className="mb-20 last:mb-0 relative pl-10 md:pl-16 group">
 
                             {/* Timeline Node */}
                             <div className="absolute -left-2.25 top-2">
                                 <div className="relative flex items-center justify-center">
-                                    <LuCircle className="text-[#222222] fill-[#0a0a0a] group-hover:text-blue-500 transition-colors duration-500" size={18} />
-                                    <div className="absolute w-2 h-2 bg-blue-500 rounded-full scale-0 group-hover:scale-100 transition-transform duration-500
+                                    <LuCircle className="text-[#222222] fill-[#0a0a0a] group-hover:text-blue-400 transition-colors duration-500" size={18} />
+                                    <div className="absolute w-2 h-2 bg-blue-400 rounded-full scale-0 group-hover:scale-100 transition-transform duration-500
                                     shadow-[0_0_15px_rgba(59,130,246,0.5)]"></div>
                                 </div>
                             </div>
@@ -105,6 +108,8 @@ export default function Experience() {
                     ))}
                 </div>
             </div>
+
+            <Footer />
         </div>
     );
 }

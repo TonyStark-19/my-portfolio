@@ -1,15 +1,16 @@
 // import components
-import SkillSection from "../Components/SkillSection"
-import SkillCard from "../Components/SkillCard"
+import SkillSection from "../Components/SkillSection";
+import SkillCard from "../Components/SkillCard";
+import Footer from "../Components/Footer";
 
 // Skills Page Component
 export default function Skills() {
     return (
-        <div className="w-full min-h-screen bg-[#0a0a0a] text-white p-6 lg:p-16">
+        <div className="w-full min-h-screen bg-[#0a0a0a] text-white p-6 lg:p-16 max-lg:pt-30">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <div className="mb-12">
-                    <h2 className="text-blue-500 font-mono tracking-widest uppercase text-sm mb-2">Skills</h2>
+                    <h2 className="text-blue-400 font-mono tracking-widest uppercase text-sm mb-2">Skills</h2>
                     <h1 className="text-4xl font-bold tracking-tight">Technical Stack</h1>
                     <p className="text-[#888888] mt-2 italic">Tools, languages, and frameworks I use to feed my creativity.</p>
                 </div>
@@ -56,6 +57,8 @@ export default function Skills() {
                     </SkillSection>
                 </div>
             </div>
+
+            <Footer />
         </div>
     );
 }

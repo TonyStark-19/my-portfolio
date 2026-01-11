@@ -1,6 +1,10 @@
 // import react icons
 import { LuExternalLink, LuGithub, LuFolderCode, LuLayers, LuDatabase, LuCode } from "react-icons/lu";
 
+// import components
+import useDaysStreak from "../Components/useDaysStreak";
+import Footer from "../Components/Footer";
+
 // Projects Page Component
 export default function Projects() {
     const projects = [
@@ -11,8 +15,7 @@ export default function Projects() {
             image: "/images/Projects/DevStash.png",
             live: "https://devstash-nine.vercel.app",
             github: "https://github.com/TonyStark-19/DevStash",
-            featured: true,
-            icon: <LuLayers className="text-blue-500" />
+            icon: <LuLayers className="text-blue-400" />
         },
         {
             title: "LearnSQL",
@@ -21,8 +24,7 @@ export default function Projects() {
             image: "/images/Projects/LearnSql.png",
             live: "https://learn-sql-eight.vercel.app/",
             github: "https://github.com/TonyStark-19/LearnSQL",
-            featured: false,
-            icon: <LuDatabase className="text-emerald-500" />
+            icon: <LuDatabase className="text-emerald-400" />
         },
         {
             title: "React Quiz App",
@@ -31,8 +33,7 @@ export default function Projects() {
             image: "/images/Projects/Quiz.png",
             live: "https://quiz-app-drab-beta.vercel.app/",
             github: "https://github.com/TonyStark-19/Quiz-app",
-            featured: false,
-            icon: <LuCode className="text-purple-500" />
+            icon: <LuCode className="text-purple-400" />
         },
         {
             title: "C-Coding Website",
@@ -41,8 +42,7 @@ export default function Projects() {
             image: "/images/Projects/C-Coding.png",
             live: "https://c-programming-six.vercel.app/",
             github: "https://github.com/TonyStark-19/C-Coding",
-            featured: false,
-            icon: <LuFolderCode className="text-orange-500" />
+            icon: <LuFolderCode className="text-orange-400" />
         },
         {
             title: "JS Mini Projects",
@@ -51,8 +51,7 @@ export default function Projects() {
             image: "/images/Projects/HtmlCssJs.png",
             live: "https://html-css-js-projects-five.vercel.app/",
             github: "https://github.com/TonyStark-19/HTML-CSS-JS-Projects",
-            featured: false,
-            icon: <LuCode className="text-yellow-500" />
+            icon: <LuCode className="text-yellow-400" />
         },
         {
             title: "HTML/CSS UI Kits",
@@ -61,26 +60,23 @@ export default function Projects() {
             image: "/images/Projects/HtmlCss.png",
             live: "https://html-css-projects-phi.vercel.app/",
             github: "https://github.com/TonyStark-19/HTML-CSS-Projects",
-            featured: false,
-            icon: <LuLayers className="text-pink-500" />
+            icon: <LuLayers className="text-pink-400" />
         }
     ];
 
     // Calculate streak dynamically
-    const startDate = new Date("2024-07-09");
-    const today = new Date();
-    const daysStreak = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+    const daysStreak = useDaysStreak(Date.UTC(2024, 6, 9));
 
     return (
-        <div className="w-full min-h-screen bg-[#0a0a0a] text-white p-6 lg:p-20">
+        <div className="w-full min-h-screen bg-[#0a0a0a] text-white p-6 lg:p-20 max-lg:pt-30">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <div className="mb-16">
-                    <h2 className="text-blue-500 font-mono tracking-widest uppercase text-sm mb-2">Projects</h2>
+                    <h2 className="text-blue-400 font-mono tracking-widest uppercase text-sm mb-2">Projects</h2>
                     <h1 className="text-5xl font-bold tracking-tight mb-4 text-white">Selected Work</h1>
                     <p className="text-[#888888] text-xl max-w-2xl">
-                        A mix of full-stack applications and mini-projects built during my <span className="text-white border-b border-white/20">
-                            {daysStreak}-day journey</span>.
+                        A curated mix of full-stack applications and focused mini-projects built across my <span className="text-white border-b 
+                        border-white/20">{daysStreak}-day journey.</span>
                     </p>
                 </div>
 
@@ -88,7 +84,7 @@ export default function Projects() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                     {projects.map((project, index) => (
                         <div
-                            key={index}
+                            key={project.title}
                             className="group bg-[#111111] border border-[#222222] rounded-[2.5rem] overflow-hidden flex flex-col hover:border-blue-500/50
                             hover:shadow-[0_20px_50px_rgba(59,130,246,0.1)] transition-all duration-500"
                         >
@@ -118,6 +114,7 @@ export default function Projects() {
                                         <a
                                             href={project.github}
                                             target="_blank"
+                                            rel="noopener noreferrer"
                                             className="p-3 bg-[#1a1a1a] rounded-full text-[#666] hover:text-white hover:bg-[#222222] transition-all"
                                             title="Source Code"
                                         >
@@ -155,6 +152,8 @@ export default function Projects() {
                     ))}
                 </div>
             </div>
+
+            <Footer />
         </div>
     );
 }

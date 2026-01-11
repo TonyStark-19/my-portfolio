@@ -6,20 +6,21 @@ import { HiOutlineSparkles } from "react-icons/hi";
 // import link
 import { Link } from "react-router-dom";
 
-// import HobbyCard component
+// import components
 import HobbyCard from "../Components/HobbyBox";
+import useDaysStreak from "../Components/useDaysStreak";
+import Footer from "../Components/Footer";
 
 // about page component
 export default function About() {
-    const startDate = new Date("2024-07-09");
-    const today = new Date();
-    const daysStreak = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+    // Calculate days streak dynamically
+    const daysStreak = useDaysStreak(Date.UTC(2024, 6, 9));
 
     return (
-        <div className="w-full min-h-screen bg-[#0a0a0a] text-white p-6 lg:p-16">
+        <div className="w-full min-h-screen bg-[#0a0a0a] text-white p-6 lg:p-16 max-lg:pt-30">
             <div className="max-w-6xl mx-auto">
                 <div className="mb-12">
-                    <h2 className="text-blue-500 font-mono tracking-widest uppercase text-sm mb-2">About Me</h2>
+                    <h2 className="text-blue-400 font-mono tracking-widest uppercase text-sm mb-2">About Me</h2>
                     <h1 className="text-5xl font-bold tracking-tighter">Identity & Journey</h1>
                 </div>
 
@@ -29,7 +30,7 @@ export default function About() {
                         {/* Profile Image Block */}
                         <div className="relative group rounded-[2.5rem] overflow-hidden border border-[#222222] h-112.5">
                             <img
-                                src="/images/profile.jpg"
+                                src="/images/Other/profile.jpg"
                                 alt="Aditya Chandel"
                                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                             />
@@ -59,9 +60,9 @@ export default function About() {
                         <div className="md:col-span-4 bg-[#111111] border border-[#222222] rounded-[2.5rem] p-10 flex flex-col justify-center relative
                         overflow-hidden group">
                             <div className="relative z-10">
-                                <span className="bg-blue-500/10 text-blue-500 text-xs font-mono px-3 py-1 rounded-full border border-blue-500/20">
+                                <span className="bg-blue-500/10 text-blue-400 text-xs font-mono px-3 py-1 rounded-full border border-blue-500/20">
                                     Non-Stop Progress</span>
-                                <h3 className="text-7xl md:text-8xl font-black mt-4 group-hover:text-blue-500 transition-colors">
+                                <h3 className="text-7xl md:text-8xl font-black mt-4 group-hover:text-blue-400 transition-colors">
                                     {daysStreak} <span className="text-3xl font-light text-[#444]">Days</span>
                                 </h3>
                                 <p className="text-[#888888] text-xl mt-4 max-w-md leading-relaxed">
@@ -75,11 +76,11 @@ export default function About() {
 
                         {/* Philosophy Block */}
                         <div className="md:col-span-2 bg-[#111111] border border-[#222222] rounded-[2.5rem] p-8 hover:border-blue-500/30 transition-all group">
-                            <MdOutlineSelfImprovement className="text-blue-500 text-3xl mb-4" />
+                            <MdOutlineSelfImprovement className="text-blue-400 text-3xl mb-4" />
                             <h4 className="text-xl font-bold mb-4">The 1% Philosophy</h4>
                             <p className="text-sm text-[#666666] leading-relaxed">
-                                I focus on detailed, marginal gains. Helping others by giving advice while becoming better <span className="text-white">
-                                    every single day</span>.
+                                I focus on detailed, marginal gains. Sharing knowledge while continuously evolving through <span className="text-white">
+                                    daily practice</span>.
                             </p>
                         </div>
 
@@ -104,6 +105,8 @@ export default function About() {
 
                 </div>
             </div>
+
+            <Footer />
         </div>
     );
 }

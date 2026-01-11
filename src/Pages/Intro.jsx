@@ -7,20 +7,22 @@ import { LuGithub, LuArrowRight } from "react-icons/lu";
 // import link
 import { Link } from 'react-router-dom';
 
+// import components
+import useDaysStreak from '../Components/useDaysStreak';
+import Footer from '../Components/Footer';
+
 // Intro Page Component
 export default function Intro() {
-    // Calculate streak dynamically
-    const startDate = new Date("2024-07-09");
-    const today = new Date();
-    const daysStreak = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+    // Calculate days streak dynamically
+    const daysStreak = useDaysStreak(Date.UTC(2024, 6, 9));
 
     return (
-        <div className="w-full min-h-screen p-10 lg:p-20 flex flex-col justify-center bg-[#0a0a0a]">
+        <div className="w-full min-h-screen p-10 lg:p-20 max-lg:pt-30 flex flex-col justify-center bg-[#0a0a0a]">
 
             {/* Text Content */}
             <div className="text-white max-w-4xl">
                 <h3 className="text-4xl md:text-5xl font-light text-[#888888]">
-                    Hii, I am
+                    Hi, I’m
                 </h3>
 
                 <h2 className="text-6xl md:text-8xl font-bold tracking-tighter bg-linear-to-r from-white via-[#888888] to-[#444444]
@@ -102,6 +104,8 @@ export default function Intro() {
                     Live Data from GitHub API
                 </p>
             </div>
+
+            <Footer />
         </div>
     );
 }

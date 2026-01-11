@@ -13,13 +13,30 @@ import About from "./About";
 // import routing
 import { Route, Routes } from "react-router-dom";
 
+// import useref and usestate
+import { useRef, useState } from "react";
+
+// import components
+import ScrollToTop from "../Components/Scroltotop.jsx";
+import TopNavbar from "../Components/Navbar.jsx";
+
 // Main Page Component
 export default function MainPage() {
+    // use ref for scroll to top
+    const scrollRef = useRef(null);
+
+    // state for sidebar open/close
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
     return (
         <div className="w-full h-screen flex flex-row bg-linear-to-br from-[#0f0f0f] via-[#171717] to-[#1f1f1f]">
-            <Left />
+            <TopNavbar toggleSidebar={() => setIsSidebarOpen(true)} />
 
-            <div className="flex-1 h-full overflow-y-auto">
+            <Left isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
+
+            <div ref={scrollRef} className="flex-1 h-full overflow-y-auto">
+                <ScrollToTop scrollRef={scrollRef} />
+
                 <Routes>
                     <Route path="/" element={<Intro />} />
                     <Route path="/home" element={<Intro />} />

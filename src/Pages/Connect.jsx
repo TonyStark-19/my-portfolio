@@ -1,6 +1,10 @@
 // import icons
-import { FaLinkedinIn, FaTwitter, FaGithub, FaMediumM, FaInstagram, FaEnvelope } from "react-icons/fa";
-import { LuSend, LuCopy, LuExternalLink } from "react-icons/lu";
+import { FaLinkedinIn, FaTwitter, FaGithub, FaMediumM, FaInstagram } from "react-icons/fa";
+import { LuSend, LuCopy, LuExternalLink, LuMail } from "react-icons/lu";
+
+// import components
+import useDaysStreak from "../Components/useDaysStreak";
+import Footer from "../Components/Footer";
 
 // import useState from react
 import { useState } from "react";
@@ -11,9 +15,7 @@ export default function Connect() {
     const email = "adityaatwork20@email.com";
 
     // Calculate streak dynamically
-    const startDate = new Date("2024-07-09");
-    const today = new Date();
-    const daysStreak = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+    const daysStreak = useDaysStreak(Date.UTC(2024, 6, 9));
 
     // Function to copy email to clipboard
     const copyToClipboard = () => {
@@ -32,11 +34,11 @@ export default function Connect() {
     ];
 
     return (
-        <div className="w-full min-h-screen bg-[#0a0a0a] text-white p-6 lg:p-20">
+        <div className="w-full min-h-screen bg-[#0a0a0a] text-white p-6 lg:p-20 max-lg:pt-30">
             <div className="max-w-5xl mx-auto">
                 {/* Header */}
                 <div className="mb-16">
-                    <h2 className="text-blue-500 font-mono tracking-widest uppercase text-sm mb-2">Connect</h2>
+                    <h2 className="text-blue-400 font-mono tracking-widest uppercase text-sm mb-2">Connect</h2>
                     <h1 className="text-5xl font-bold tracking-tight mb-4">Let's Connect</h1>
                     <p className="text-[#888888] text-xl max-w-2xl">
                         I'm always open to discussing new projects, creative ideas, or being part of your visions.
@@ -48,8 +50,8 @@ export default function Connect() {
                     {/* Big Email Card */}
                     <div className="md:col-span-2 bg-[#111111] border border-[#222222] p-10 rounded-[2.5rem] flex flex-col justify-between group">
                         <div>
-                            <div className="w-12 h-12 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-500 mb-6">
-                                <FaEnvelope className="text-2xl" />
+                            <div className="w-12 h-12 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-400 mb-6">
+                                <LuMail className="text-2xl" />
                             </div>
                             <h2 className="text-3xl font-bold mb-2">Drop me a message</h2>
                             <p className="text-[#666666]">For collaborations, inquiries, or just a virtual coffee.</p>
@@ -82,7 +84,7 @@ export default function Connect() {
                                     ${social.color}`}
                             >
                                 <div className="flex items-center gap-4">
-                                    <div className="text-2xl text-white group-hover:scale-110 transition-transform">
+                                    <div className="text-xl text-white/90 group-hover:scale-110 transition-transform">
                                         {social.icon}
                                     </div>
                                     <div>
@@ -103,6 +105,8 @@ export default function Connect() {
                     </p>
                 </div>
             </div>
+
+            <Footer />
         </div>
     );
 }
