@@ -38,7 +38,7 @@ export default function Experience() {
     ];
 
     return (
-        <div className="w-full min-h-screen bg-[#0a0a0a] text-white p-8 lg:p-24 selection:bg-blue-500/30 max-lg:pt-30">
+        <div className="w-full min-h-screen bg-[#0a0a0a] text-white p-8 max-[500px]:p-5 lg:p-24 selection:bg-blue-500/30 max-lg:pt-30">
             <div className="max-w-4xl mx-auto">
                 {/* Section Title */}
                 <div className="mb-20">

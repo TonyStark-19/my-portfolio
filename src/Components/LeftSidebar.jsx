@@ -41,28 +41,29 @@ export default function LeftSidebar({ isOpen, setIsOpen }) {
                     </button>
                 </div>
 
-                {/* Profile Section */}
-                <div className="flex flex-col items-center py-10">
-                    <div className="relative">
-                        <img
-                            src="/images/Other/profile.jpg"
-                            alt="Profile"
-                            className="w-32 h-32 rounded-2xl object-cover border-2 border-[#333333] grayscale hover:grayscale-0 transition-all duration-500"
-                        />
-                        <div className="absolute -bottom-2 -right-2 w-6 h-6 flex items-center justify-center">
-                            {/* The Pinging Radar Circle */}
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <nav className="flex-1 px-4 pb-5 space-y-2 overflow-y-auto custom-scrollbar">
+                    {/* Profile Section */}
+                    <div className="flex flex-col items-center py-10">
+                        <div className="relative">
+                            <img
+                                src="/images/Other/profile.jpg"
+                                alt="Profile"
+                                className="w-32 h-32 rounded-2xl object-cover border-2 border-[#333333] grayscale hover:grayscale-0 transition-all duration-500
+                                max-lg:w-75 max-lg:h-50"
+                            />
+                            <div className="absolute -bottom-2 -right-2 w-6 h-6 flex items-center justify-center">
+                                {/* The Pinging Radar Circle */}
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
 
-                            {/* The Solid Static Circle (Your original node) */}
-                            <span className="relative inline-flex rounded-full h-5 w-5 bg-green-500 border-4 border-[#111111]"></span>
+                                {/* The Solid Static Circle (Your original node) */}
+                                <span className="relative inline-flex rounded-full h-5 w-5 bg-green-500 border-4 border-[#111111]"></span>
+                            </div>
                         </div>
+                        <h1 className="mt-4 text-white font-semibold text-lg tracking-wide">Aditya Chandel</h1>
+                        <p className="text-[#666666] text-sm mt-1">Full Stack Developer</p>
                     </div>
-                    <h1 className="mt-4 text-white font-semibold text-lg tracking-wide">Aditya Chandel</h1>
-                    <p className="text-[#666666] text-sm mt-1">Full Stack Developer</p>
-                </div>
 
-                {/* Navigation */}
-                <nav className="flex-1 px-4 space-y-2 overflow-y-auto custom-scrollbar">
+                    {/* Navigation */}
                     {pages.map((page) => {
                         const isActive = activePath === page.path || (activePath === "/" && page.slug === "home");
                         return (
@@ -98,8 +99,8 @@ export default function LeftSidebar({ isOpen, setIsOpen }) {
                 </nav>
 
                 {/* Bottom Footer */}
-                <div className="px-6 pb-3 text-[#888888] text-xs text-center">
-                    Made with ❤️ by Aditya chandel
+                <div className="px-6 pb-3 pt-3 text-[#888888] text-xs text-center">
+                    Made with ❤️ by Aditya Chandel
                 </div>
             </div>
         </aside>

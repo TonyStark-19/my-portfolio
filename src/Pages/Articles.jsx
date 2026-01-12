@@ -46,11 +46,12 @@ export default function Articles() {
                             href={article.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group block bg-[#111111] border border-[#222222] rounded-4xl overflow-hidden hover:border-blue-400/50 transition-all duration-300"
+                            className="group block bg-[#111111] border border-[#222222] rounded-4xl overflow-hidden hover:border-blue-400/50
+                            transition-allduration-300"
                         >
-                            <div className="flex flex-col md:flex-row items-center">
+                            <div className="flex flex-col max-[1150px]:flex-col min-[1150px]:flex-row max-[1024px]:flex-row max-[700px]:flex-col items-center">
                                 {/* Article Image */}
-                                <div className="w-full md:w-1/3 h-60 overflow-hidden">
+                                <div className="max-[1150px]:w-full min-[1150px]:w-1/3 max-[1024px]:1/3 max-[700px]:w-full h-60 overflow-hidden">
                                     <img
                                         src={article.image}
                                         alt={article.title}
@@ -59,7 +60,7 @@ export default function Articles() {
                                 </div>
 
                                 {/* Article Content */}
-                                <div className="w-full md:w-2/3 p-8">
+                                <div className="max-[1150px]:w-full min-[1150px]:w-2/3 max-[1024px]:2/3 max-[700px]:w-full p-8">
                                     <div className="flex gap-2 mb-4">
                                         {article.tags.map(tag => (
                                             <span key={tag} className="text-[10px] uppercase tracking-widest text-blue-400 bg-blue-400/10 px-2 py-1 rounded-md">

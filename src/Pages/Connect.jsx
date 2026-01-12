@@ -26,7 +26,10 @@ export default function Connect() {
 
     // Social media links data
     const socials = [
-        { name: "LinkedIn", handle: "@in/aditya-chandel-dev", icon: <FaLinkedinIn />, color: "hover:bg-[#0077B5]", url: "https://www.linkedin.com/in/aditya-chandel-dev" },
+        {
+            name: "LinkedIn", handle: "@in/aditya-chandel-dev", icon: <FaLinkedinIn />, color: "hover:bg-[#0077B5]",
+            url: "https://www.linkedin.com/in/aditya-chandel-dev"
+        },
         { name: "Twitter", handle: "@iamaditya_3", icon: <FaTwitter />, color: "hover:bg-[#1DA1F2]", url: "https://twitter.com/iamaditya_3" },
         { name: "GitHub", handle: "@TonyStark-19", icon: <FaGithub />, color: "hover:bg-[#333]", url: "https://github.com/TonyStark-19" },
         { name: "Medium", handle: "@adityachandel371", icon: <FaMediumM />, color: "hover:bg-[#00AB6C]", url: "https://medium.com/@adityachandel371" },
@@ -46,9 +49,9 @@ export default function Connect() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid max-[800px]:grid-cols-1 min-[800px]:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3 gap-6">
                     {/* Big Email Card */}
-                    <div className="md:col-span-2 bg-[#111111] border border-[#222222] p-10 rounded-[2.5rem] flex flex-col justify-between group">
+                    <div className="md:col-span-2 bg-[#111111] border border-[#222222] p-10 max-[500px]:px-6 rounded-[2.5rem] flex flex-col justify-between group">
                         <div>
                             <div className="w-12 h-12 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-400 mb-6">
                                 <LuMail className="text-2xl" />
@@ -59,7 +62,7 @@ export default function Connect() {
 
                         <div className="mt-10 flex flex-col sm:flex-row items-center gap-4">
                             <a href={`mailto:${email}`} className="w-full sm:w-auto bg-white text-black px-8 py-4 rounded-2xl font-bold flex items-center
-                            justify-center gap-2 hover:bg-blue-400 transition-all">
+                            justify-center gap-2 hover:bg-blue-400 transition-all]">
                                 <LuSend /> Send Email
                             </a>
                             <button

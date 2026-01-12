@@ -1,3 +1,6 @@
+// import react icons
+import { LuMenu } from "react-icons/lu";
+
 // Top Navbar Component
 export default function TopNavbar({ toggleSidebar }) {
     return (
@@ -6,10 +9,15 @@ export default function TopNavbar({ toggleSidebar }) {
                 {/* Menu Toggle Button */}
                 <button
                     onClick={toggleSidebar}
-                    className="p-3 rounded-xl bg-[#111111] border border-[#222222] text-white hover:bg-[#222222] transition"
+                    className="p-2.5 rounded-xl bg-[#111111] border border-[#222222] text-white hover:bg-[#222222] transition"
                 >
-                    ☰
+                    <LuMenu className="text-xl" />
                 </button>
+
+                {/* Logo / Brand Name */}
+                <div className="text-white font-semibold text-lg">
+                    Aditya Chandel
+                </div>
             </div>
         </header>
     );

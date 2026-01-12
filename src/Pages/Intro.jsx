@@ -17,7 +17,7 @@ export default function Intro() {
     const daysStreak = useDaysStreak(Date.UTC(2024, 6, 9));
 
     return (
-        <div className="w-full min-h-screen p-10 lg:p-20 max-lg:pt-30 flex flex-col justify-center bg-[#0a0a0a]">
+        <div className="w-full min-h-screen p-10 lg:p-20 max-lg:pt-30 max-[500px]:p-5 flex flex-col justify-center bg-[#0a0a0a]">
 
             {/* Text Content */}
             <div className="text-white max-w-4xl">
@@ -42,10 +42,10 @@ export default function Intro() {
                 </p>
 
                 {/* Call to Action Buttons */}
-                <div className="flex space-x-4 mt-10">
+                <div className="flex space-x-4 mt-10 max-[500px]:flex-col max-[500px]:space-x-0 max-[500px]:space-y-4">
                     <Link to="/projects">
                         <button className="bg-white text-black px-8 py-3 rounded-2xl font-semibold flex items-center group hover:bg-blue-400
-                        transition-all cursor-pointer">
+                        transition-all cursor-pointer max-[500px]:w-full justify-center">
                             View Projects
                             <LuArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                         </button>
@@ -53,7 +53,7 @@ export default function Intro() {
 
                     <Link to="/about">
                         <button className="border border-[#333333] text-white px-8 py-3 rounded-2xl font-semibold hover:bg-[#1a1a1a] transition-all
-                        cursor-pointer">
+                        cursor-pointer max-[500px]:w-full justify-center">
                             About me
                         </button>
                     </Link>

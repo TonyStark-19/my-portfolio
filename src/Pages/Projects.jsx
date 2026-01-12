@@ -81,12 +81,12 @@ export default function Projects() {
                 </div>
 
                 {/* Projects Grid - CHANGED TO 2 COLUMNS */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <div className="grid max-[900px]:grid-cols-1 max-[1024px]:grid-cols-2 max-[1200px]:grid-cols-1 min-[1200px]:grid-cols-2 gap-10">
                     {projects.map((project, index) => (
                         <div
                             key={project.title}
-                            className="group bg-[#111111] border border-[#222222] rounded-[2.5rem] overflow-hidden flex flex-col hover:border-blue-500/50
-                            hover:shadow-[0_20px_50px_rgba(59,130,246,0.1)] transition-all duration-500"
+                            className="group bg-[#111111] border border-[#222222] rounded-[2.5rem] max-[500px]:rounded-4xl overflow-hidden flex
+                            flex-col hover:border-blue-500/50 hover:shadow-[0_20px_50px_rgba(59,130,246,0.1)] transition-all duration-500"
                         >
                             {/* Image Container */}
                             <div className="relative aspect-video overflow-hidden">
@@ -94,23 +94,24 @@ export default function Projects() {
                                     src={project.image}
                                     alt={project.title}
                                     className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 group-hover:scale-105 transition-transform
-                                    duration-700 opacity-90 group-hover:opacity-100"
+                                    duration-700 opacity-90 group-hover:opacity-100]"
                                 />
                                 <div className="absolute inset-0 bg-linear-to-t from-[#111111] via-transparent to-transparent opacity-60" />
                             </div>
 
                             {/* Content */}
-                            <div className="p-10 flex-1 flex flex-col">
-                                <div className="flex items-start justify-between mb-4">
+                            <div className="p-10 flex-1 flex flex-col max-[500px]:p-6">
+                                <div className="flex items-start justify-between mb-4 max-[600px]:flex-col max-[600px]:items-start max-[600px]:gap-6">
                                     <div className="flex items-center gap-4">
                                         <div className="p-3 bg-[#1a1a1a] rounded-2xl border border-[#222222] group-hover:bg-[#222222] transition-colors">
                                             {project.icon}
                                         </div>
-                                        <h3 className="text-3xl font-bold tracking-tight text-white group-hover:text-blue-400 transition-colors">
+                                        <h3 className="text-3xl max-[500px]:text-2xl font-bold tracking-tight text-white
+                                        group-hover:text-blue-400 transition-colors">
                                             {project.title}
                                         </h3>
                                     </div>
-                                    <div className="flex gap-2">
+                                    <div className="flex gap-2 max-[600px]:gap-3 max-[600px]:mb-2">
                                         <a
                                             href={project.github}
                                             target="_blank"

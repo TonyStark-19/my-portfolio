@@ -30,11 +30,15 @@ export default function MainPage() {
 
     return (
         <div className="w-full h-screen flex flex-row bg-linear-to-br from-[#0f0f0f] via-[#171717] to-[#1f1f1f]">
+            {/* Top Navbar */}
             <TopNavbar toggleSidebar={() => setIsSidebarOpen(true)} />
 
+            {/* Left Sidebar */}
             <Left isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
 
+            {/* Main Content Area */}
             <div ref={scrollRef} className="flex-1 h-full overflow-y-auto">
+                {/* Scroll to top button */}
                 <ScrollToTop scrollRef={scrollRef} />
 
                 <Routes>
