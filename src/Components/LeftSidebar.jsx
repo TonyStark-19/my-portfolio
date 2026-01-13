@@ -32,7 +32,12 @@ export default function LeftSidebar({ isOpen, setIsOpen }) {
             <div className="h-full flex flex-col overflow-y-auto">
 
                 {/* Close Button (Mobile only) */}
-                <div className="lg:hidden flex justify-end p-6">
+                <div className="lg:hidden flex items-center justify-between px-6 py-3 border-b border-[#222222]">
+                    {/* Logo / Brand Name */}
+                    <div className="text-white font-semibold text-lg">
+                        Aditya Chandel
+                    </div>
+
                     <button
                         onClick={() => setIsOpen(false)}
                         className="p-2 rounded-xl bg-[#1a1a1a] hover:bg-[#222222] transition"

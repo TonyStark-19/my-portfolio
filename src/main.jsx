@@ -13,11 +13,15 @@ import App from './App.jsx';
 // import index.css
 import './index.css';
 
+// import vercel analytics
+import { Analytics } from "@vercel/analytics/react";
+
 // routing
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <App />
+      <Analytics />
     </BrowserRouter>
   </StrictMode>
 );
