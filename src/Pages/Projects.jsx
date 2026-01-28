@@ -38,7 +38,7 @@ export default function Projects() {
         {
             title: "C-Coding Website",
             summary: "Categorized C programs across three levels of complexity, transformed from a repo into a responsive React app.",
-            tech: ["React Js", "CSS", "C", "React Router"],
+            tech: ["React Js", "CSS", "C", "React Router", "Open-Source"],
             image: "/images/Projects/C-Coding.png",
             live: "https://c-programming-six.vercel.app/",
             github: "https://github.com/TonyStark-19/C-Coding",
@@ -47,7 +47,7 @@ export default function Projects() {
         {
             title: "JS Mini Projects",
             summary: "A curated collection of HTML, CSS & JS projects built to sharpen front-end logic and UI/UX fundamentals.",
-            tech: ["JavaScript", "HTML5", "CSS3"],
+            tech: ["JavaScript", "HTML5", "CSS3", "Open-Source"],
             image: "/images/Projects/HtmlCssJs.png",
             live: "https://html-css-js-projects-five.vercel.app/",
             github: "https://github.com/TonyStark-19/HTML-CSS-JS-Projects",
@@ -56,7 +56,7 @@ export default function Projects() {
         {
             title: "HTML/CSS UI Kits",
             summary: "Showcasing multiple UI components, animations, and layouts built to strengthen pure CSS skills.",
-            tech: ["HTML5", "CSS3", "Animations"],
+            tech: ["HTML5", "CSS3", "Animations", "Open-Source"],
             image: "/images/Projects/HtmlCss.png",
             live: "https://html-css-projects-phi.vercel.app/",
             github: "https://github.com/TonyStark-19/HTML-CSS-Projects",
