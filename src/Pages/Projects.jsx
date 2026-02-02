@@ -27,8 +27,8 @@ export default function Projects() {
             icon: <LuDatabase className="text-emerald-400" />
         },
         {
-            title: "React Quiz App",
-            summary: "Dynamic platform with score tracking, review sections, and dual-theme support for an optimal testing experience.",
+            title: "Quizify",
+            summary: "Responsive React + Tailwind interview quiz platform with multi-topic quizzes, instant scoring, answer review, and light/dark mode for a smooth experience.",
             tech: ["React Js", "Tailwind CSS", "React Router"],
             image: "/images/Projects/Quiz.png",
             live: "https://quiz-app-drab-beta.vercel.app/",
