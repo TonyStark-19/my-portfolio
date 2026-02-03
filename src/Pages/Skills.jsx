@@ -33,6 +33,7 @@ export default function Skills() {
                         <SkillCard img="/images/Skills/Express.png" label="Express" />
                         <SkillCard img="/images/Skills/MongoDB.png" label="MongoDB" />
                         <SkillCard img="/images/Skills/sql.jpg" label="SQL" />
+                        <SkillCard img="/images/Skills/Postman.png" label="Postman" />
                     </SkillSection>
 
                     {/* Category: AI & Data Science */}
@@ -44,6 +45,7 @@ export default function Skills() {
                         <SkillCard img="/images/Skills/Seaborn.png" label="Seaborn" />
                         <SkillCard img="/images/Skills/scikit-learn.png" label="Scikit-Learn" />
                         <SkillCard img="/images/Skills/Streamlit.png" label="Streamlit" />
+                        <SkillCard img="/images/Skills/Jupyter.png" label="Jupyter Notebook" />
                     </SkillSection>
 
                     {/* Category: Languages & Tools */}
@@ -53,7 +55,6 @@ export default function Skills() {
                         <SkillCard img="/images/Skills/Java.png" label="Java" />
                         <SkillCard img="/images/Skills/Git.png" label="Git" />
                         <SkillCard img="/images/Skills/VS.png" label="VS Code" />
-                        <SkillCard img="/images/Skills/Figma.png" label="Figma" />
                     </SkillSection>
                 </div>
             </div>
