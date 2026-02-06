@@ -8,6 +8,20 @@ import Footer from "../Components/Footer";
 export default function Experience() {
     const experiences = [
         {
+            role: "Open Source Contributor",
+            company: "Open Source Global Connect",
+            type: "Volunteer",
+            duration: "Feb 2026 - Present",
+            location: "Remote",
+            description: [
+                "Selected as an Open Source Contributor for Open Source Global Connect.",
+                "Contributing to open-source projects by writing code, fixing bugs, and improving features.",
+                "Collaborating with global developers using Git, GitHub, and open-source best practices."
+            ],
+            skills: ["Open Source", "Git", "GitHub", "Collaboration"],
+            logo: "/images/Experience/OSGC.png"
+        },
+        {
             role: "AI-ML Data Science Intern",
             company: "EiSystems Technologies",
             type: "Internship",
