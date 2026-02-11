@@ -25,6 +25,7 @@ export default function Skills() {
                         <SkillCard img="/images/Skills/Tailwind.png" label="Tailwind CSS" />
                         <SkillCard img="/images/Skills/Bootstrap.png" label="Bootstrap" />
                         <SkillCard img="/images/Skills/Vite.js.png" label="Vite" />
+                        <SkillCard img="/images/Skills/TypeScript.png" label="TypeScript" />
                     </SkillSection>
 
                     {/* Category: Backend & DB */}
@@ -48,12 +49,13 @@ export default function Skills() {
                         <SkillCard img="/images/Skills/Jupyter.png" label="Jupyter Notebook" />
                     </SkillSection>
 
-                    {/* Category: Languages & Tools */}
-                    <SkillSection title="Languages & Tools">
+                    {/* Category: Languages, Tools & Platforms */}
+                    <SkillSection title="Languages, Tools & Platforms">
                         <SkillCard img="/images/Skills/C.png" label="C" />
                         <SkillCard img="/images/Skills/Cpp.png" label="C++" />
                         <SkillCard img="/images/Skills/Java.png" label="Java" />
                         <SkillCard img="/images/Skills/Git.png" label="Git" />
+                        <SkillCard img="/images/Skills/GitHub.png" label="GitHub" />
                         <SkillCard img="/images/Skills/VS.png" label="VS Code" />
                     </SkillSection>
                 </div>
