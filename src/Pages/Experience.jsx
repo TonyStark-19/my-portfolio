@@ -8,6 +8,20 @@ import Footer from "../Components/Footer";
 export default function Experience() {
     const experiences = [
         {
+            role: "Campus Ambassador Intern",
+            company: "Krutrim Insights",
+            type: "Internship",
+            duration: "Feb 2026 - Present",
+            location: "Remote",
+            description: [
+                "Representing Krutrim Insights within the college community to promote structured tech learning.",
+                "Driving awareness and participation for the 30-Day DSA Challenge through peer engagement.",
+                "Acting as a student liaison while strengthening communication, outreach, and leadership skills."
+            ],
+            skills: ["Community Outreach", "DSA", "Communication", "Leadership"],
+            logo: "/images/Experience/Krutrim.jpg"
+        },
+        {
             role: "Open Source Contributor",
             company: "Open Source Global Connect",
             type: "Volunteer",
