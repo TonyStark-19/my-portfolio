@@ -109,6 +109,7 @@ export default function Connect() {
                 </div>
             </div>
 
+            {/* footer component */}
             <Footer />
         </div>
     );

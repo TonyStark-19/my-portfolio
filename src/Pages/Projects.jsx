@@ -154,6 +154,7 @@ export default function Projects() {
                 </div>
             </div>
 
+            {/* footer component */}
             <Footer />
         </div>
     );

@@ -6,7 +6,22 @@ import Footer from "../Components/Footer";
 
 // Experience Page Component
 export default function Experience() {
+    // experiences
     const experiences = [
+        {
+            role: "Web Development Intern",
+            company: "PHICSIT InfoTech Pvt. Ltd.",
+            type: "Internship",
+            duration: "Mar 2026 - Present",
+            location: "Remote",
+            description: [
+                "Selected through Phase 2 of the Open Source Connect program after an interview process among 4000+ participants.",
+                "Working on real-world web development tasks while gaining practical industry exposure.",
+                "Collaborating with mentors and developers to improve code quality, development workflows, and problem-solving skills."
+            ],
+            skills: ["Web Development", "JavaScript", "React", "Git", "Collaboration"],
+            logo: "/images/Experience/PHICSIT.jpg"
+        },
         {
             role: "Campus Ambassador Intern",
             company: "Krutrim Insights",
@@ -28,9 +43,9 @@ export default function Experience() {
             duration: "Feb 2026 - Present",
             location: "Remote",
             description: [
-                "Selected as an Open Source Contributor for Open Source Global Connect.",
-                "Contributing to open-source projects by writing code, fixing bugs, and improving features.",
-                "Collaborating with global developers using Git, GitHub, and open-source best practices."
+                "Ranked among the top 20 contributors out of 4000+ participants in the Open Source Connect program.",
+                "Contributed to multiple repositories by submitting high-quality pull requests focused on UI improvements and code quality.",
+                "Collaborated with maintainers and developers using Git and GitHub while following open-source best practices."
             ],
             skills: ["Open Source", "Git", "GitHub", "Collaboration"],
             logo: "/images/Experience/OSGC.png"
@@ -137,6 +152,7 @@ export default function Experience() {
                 </div>
             </div>
 
+            {/* footer component */}
             <Footer />
         </div>
     );

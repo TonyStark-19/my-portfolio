@@ -105,6 +105,7 @@ export default function Intro() {
                 </p>
             </div>
 
+            {/* footer component */}
             <Footer />
         </div>
     );

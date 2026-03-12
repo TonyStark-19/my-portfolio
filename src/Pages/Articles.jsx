@@ -74,10 +74,12 @@ export default function Articles() {
                                             </span>
                                         )}
                                     </div>
+
                                     <h2 className="text-2xl font-bold mb-3 group-hover:text-blue-400 transition-colors flex items-center gap-2">
                                         {article.title}
                                         <LuExternalLink className="text-sm opacity-0 group-hover:opacity-100 transition-opacity" />
                                     </h2>
+
                                     <p className="text-[#666666] line-clamp-2 mb-6">
                                         {article.description}
                                     </p>
@@ -97,6 +99,7 @@ export default function Articles() {
                 </div>
             </div>
 
+            {/* footer component */}
             <Footer />
         </div>
     );

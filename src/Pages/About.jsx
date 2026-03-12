@@ -106,6 +106,7 @@ export default function About() {
                 </div>
             </div>
 
+            {/* footer component */}
             <Footer />
         </div>
     );

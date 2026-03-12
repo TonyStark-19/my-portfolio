@@ -61,6 +61,7 @@ export default function Skills() {
                 </div>
             </div>
 
+            {/* footer component */}
             <Footer />
         </div>
     );
