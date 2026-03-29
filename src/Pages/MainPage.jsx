@@ -1,5 +1,5 @@
 // import components
-import LeftSidebar from "../Components/leftSidebar/LeftSidebar.jsx";
+import LeftSidebar from "../Components/LeftSidebar/LeftSidebar.jsx"
 
 // import pages
 import Intro from "./Intro";
