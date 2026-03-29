@@ -3,8 +3,8 @@ import { FaLinkedinIn, FaTwitter, FaGithub, FaMediumM, FaInstagram } from "react
 import { LuSend, LuCopy, LuExternalLink, LuMail } from "react-icons/lu";
 
 // import components
-import useDaysStreak from "../Components/useDaysStreak";
-import Footer from "../Components/Footer";
+import useDaysStreak from "../Components/Footer/useDaysStreak";
+import Footer from "../Components/Footer/Footer";
 
 // import useState from react
 import { useState } from "react";

@@ -1,7 +1,7 @@
 // import components
 import SkillSection from "../Components/SkillSection";
 import SkillCard from "../Components/SkillCard";
-import Footer from "../Components/Footer";
+import Footer from "../Components/Footer/Footer";
 
 // Skills Page Component
 export default function Skills() {

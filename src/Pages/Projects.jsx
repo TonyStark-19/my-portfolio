@@ -2,8 +2,8 @@
 import { LuExternalLink, LuGithub, LuFolderCode, LuLayers, LuDatabase, LuCode } from "react-icons/lu";
 
 // import components
-import useDaysStreak from "../Components/useDaysStreak";
-import Footer from "../Components/Footer";
+import useDaysStreak from "../Components/Footer/useDaysStreak";
+import Footer from "../Components/Footer/Footer";
 
 // Projects Page Component
 export default function Projects() {

@@ -2,8 +2,8 @@
 import { LuExternalLink, LuClock, LuCalendar } from "react-icons/lu";
 
 // import components
-import useDaysStreak from "../Components/useDaysStreak";
-import Footer from "../Components/Footer";
+import useDaysStreak from "../Components/Footer/useDaysStreak";
+import Footer from "../Components/Footer/Footer";
 
 // Articles Page Component
 export default function Articles() {

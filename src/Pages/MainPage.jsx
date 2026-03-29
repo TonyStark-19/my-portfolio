@@ -1,5 +1,5 @@
 // import components
-import Left from "../Components/LeftSidebar";
+import LeftSidebar from "../Components/leftSidebar/LeftSidebar.jsx";
 
 // import pages
 import Intro from "./Intro";
@@ -18,7 +18,7 @@ import { useRef, useState } from "react";
 
 // import components
 import ScrollToTop from "../Components/Scroltotop.jsx";
-import TopNavbar from "../Components/Navbar.jsx";
+import TopNavbar from "../Components/Navbar/Navbar.jsx";
 
 // Main Page Component
 export default function MainPage() {
@@ -34,7 +34,7 @@ export default function MainPage() {
             <TopNavbar toggleSidebar={() => setIsSidebarOpen(true)} />
 
             {/* Left Sidebar */}
-            <Left isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
+            <LeftSidebar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
 
             {/* Main Content Area */}
             <div ref={scrollRef} className="flex-1 h-full overflow-y-auto">

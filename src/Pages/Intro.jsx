@@ -8,8 +8,8 @@ import { LuGithub, LuArrowRight } from "react-icons/lu";
 import { Link } from 'react-router-dom';
 
 // import components
-import useDaysStreak from '../Components/useDaysStreak';
-import Footer from '../Components/Footer';
+import useDaysStreak from '../Components/Footer/useDaysStreak';
+import Footer from '../Components/Footer/Footer';
 
 // Intro Page Component
 export default function Intro() {

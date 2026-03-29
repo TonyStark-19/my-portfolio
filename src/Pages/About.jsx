@@ -8,8 +8,8 @@ import { Link } from "react-router-dom";
 
 // import components
 import HobbyCard from "../Components/HobbyBox";
-import useDaysStreak from "../Components/useDaysStreak";
-import Footer from "../Components/Footer";
+import useDaysStreak from "../Components/Footer/useDaysStreak";
+import Footer from "../Components/Footer/Footer";
 
 // about page component
 export default function About() {

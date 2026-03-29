@@ -2,7 +2,7 @@
 import { LuCalendar, LuMapPin, LuCircle } from "react-icons/lu";
 
 // import component
-import Footer from "../Components/Footer";
+import Footer from "../Components/Footer/Footer";
 
 // Experience Page Component
 export default function Experience() {
