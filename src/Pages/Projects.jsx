@@ -1,12 +1,17 @@
-import { LuExternalLink, LuGithub, LuFolderCode, LuLayers, LuDatabase, LuCode, LuBriefcase } from "react-icons/lu";
-
+// import components
 import useDaysStreak from "../Components/Footer/useDaysStreak";
 import Footer from "../Components/Footer/Footer";
+import ProjectCard from "../Components/Projects/ProjectCard";
+import FreelanceCard from "../Components/Projects/FreelanceCard";
+import SectionHeader from "../Components/Projects/SectionHeader";
 
-// ─── Constants ────────────────────────────────────────────────────────────────
-
+// constants
 const STREAK_START = Date.UTC(2024, 6, 9);
 
+// import icons
+import { LuLayers, LuDatabase, LuCode, LuFolderCode, LuBriefcase } from "react-icons/lu";
+
+// project data
 const PERSONAL_PROJECTS = [
     {
         title: "DevStash",
@@ -64,6 +69,7 @@ const PERSONAL_PROJECTS = [
     },
 ];
 
+// freelance projects data
 const FREELANCE_PROJECTS = [
     {
         title: "Cervine",
@@ -87,208 +93,13 @@ const FREELANCE_PROJECTS = [
     },
 ];
 
-// ─── Sub-components ───────────────────────────────────────────────────────────
-
-function TechTag({ label }) {
-    return (
-        <span className="text-[11px] uppercase tracking-widest px-3 py-1 bg-white/[0.03] border border-white/[0.06] text-[#555555]
-            group-hover:text-[#888888] group-hover:border-white/[0.1] rounded-full transition-all duration-300">
-            {label}
-        </span>
-    );
-}
-
-function ProjectCard({ project }) {
-    return (
-        <div className="group bg-white/[0.02] border border-white/[0.06] rounded-2xl overflow-hidden flex flex-col
-            hover:bg-white/[0.04] hover:border-white/[0.12] transition-all duration-300">
-
-            {/* Thumbnail */}
-            <div className="relative aspect-video overflow-hidden bg-[#111111]">
-                <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover object-top opacity-75 grayscale-[0.3]
-                        group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-[1.03]
-                        transition-all duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent" />
-            </div>
-
-            {/* Body */}
-            <div className="p-6 flex-1 flex flex-col gap-4">
-
-                {/* Title row */}
-                <div className="flex items-start justify-between gap-4">
-                    <div className="flex items-center gap-3">
-                        <span className="text-[18px]">{project.icon}</span>
-                        <div>
-                            <h3 className="text-[15px] font-semibold text-white/90 tracking-wide leading-tight">
-                                {project.title}
-                            </h3>
-                            {project.client && (
-                                <p className="text-[11px] text-[#444444] mt-0.5 font-mono tracking-wide">
-                                    for {project.client}
-                                </p>
-                            )}
-                        </div>
-                    </div>
-
-                    {/* Links */}
-                    <div className="flex items-center gap-1.5 flex-shrink-0">
-                        {project.github && (
-                            <a
-                                href={project.github}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center justify-center w-8 h-8 rounded-lg
-                                    bg-white/[0.04] border border-white/[0.07] text-[#555555]
-                                    hover:text-white hover:bg-white/[0.08] transition-all duration-150"
-                                title="Source Code"
-                            >
-                                <LuGithub size={14} />
-                            </a>
-                        )}
-                        <a
-                            href={project.live}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center justify-center w-8 h-8 rounded-lg
-                                bg-white/[0.04] border border-white/[0.07] text-[#555555]
-                                hover:text-white hover:bg-white/[0.08] transition-all duration-150"
-                            title="Live Demo"
-                        >
-                            <LuExternalLink size={14} />
-                        </a>
-                    </div>
-                </div>
-
-                {/* Description */}
-                <p className="text-[13px] text-[#555555] leading-relaxed group-hover:text-[#777777] transition-colors duration-300 flex-1">
-                    {project.summary}
-                </p>
-
-                {/* Tech tags */}
-                <div className="flex flex-wrap gap-2 mt-auto pt-1">
-                    {project.tech.map((t) => (
-                        <TechTag key={t} label={t} />
-                    ))}
-                </div>
-            </div>
-        </div>
-    );
-}
-
-function FreelanceCard({ project }) {
-    return (
-        <div className="group bg-white/[0.02] border border-amber-400/[0.08] rounded-2xl overflow-hidden flex flex-col
-            hover:bg-white/[0.04] hover:border-amber-400/[0.18] transition-all duration-300">
-
-            {/* Thumbnail */}
-            <div className="relative aspect-video overflow-hidden bg-[#111111]">
-                <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover object-top opacity-75 grayscale-[0.3]
-                        group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-[1.03]
-                        transition-all duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent" />
-
-                {/* Freelance badge on image */}
-                <div className="absolute top-3 left-3">
-                    <span className="flex items-center gap-1.5 text-[10px] font-mono tracking-widest uppercase
-                        px-2.5 py-1 rounded-full bg-amber-400/15 border border-amber-400/25 text-amber-400">
-                        <LuBriefcase size={9} />
-                        Freelance
-                    </span>
-                </div>
-            </div>
-
-            {/* Body */}
-            <div className="p-6 flex-1 flex flex-col gap-4">
-                <div className="flex items-start justify-between gap-4">
-                    <div className="flex items-center gap-3">
-                        <span className="text-[18px]">{project.icon}</span>
-                        <div>
-                            <h3 className="text-[15px] font-semibold text-white/90 tracking-wide leading-tight">
-                                {project.title}
-                            </h3>
-                            <p className="text-[11px] text-amber-400/60 mt-0.5 font-mono tracking-wide">
-                                for {project.client}
-                            </p>
-                        </div>
-                    </div>
-
-                    {/* Live link only — no github for client work */}
-                    <a
-                        href={project.live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center w-8 h-8 rounded-lg flex-shrink-0
-                            bg-white/[0.04] border border-white/[0.07] text-[#555555]
-                            hover:text-white hover:bg-white/[0.08] transition-all duration-150"
-                        title="Live Site"
-                    >
-                        <LuExternalLink size={14} />
-                    </a>
-                </div>
-
-                <p className="text-[13px] text-[#555555] leading-relaxed group-hover:text-[#777777] transition-colors duration-300 flex-1">
-                    {project.summary}
-                </p>
-
-                <div className="flex flex-wrap gap-2 mt-auto pt-1">
-                    {project.tech.map((t) => (
-                        <TechTag key={t} label={t} />
-                    ))}
-                </div>
-            </div>
-        </div>
-    );
-}
-
-function SectionHeader({ label, title, description }) {
-    return (
-        <div className="mb-8">
-            <p className="text-blue-400 font-mono tracking-[0.2em] uppercase text-[11px] mb-3">
-                {label}
-            </p>
-            <h2 className="text-[28px] md:text-[36px] font-bold tracking-tight leading-none">
-                {title}
-            </h2>
-            {description && (
-                <p className="text-[#444444] mt-3 text-[14px] leading-relaxed max-w-xl">
-                    {description}
-                </p>
-            )}
-        </div>
-    );
-}
-
-// ─── Main Component ───────────────────────────────────────────────────────────
-
+// projects page
 export default function Projects() {
     const daysStreak = useDaysStreak(STREAK_START);
 
     return (
         <div className="w-full min-h-screen bg-[#0a0a0a] text-white p-6 lg:p-16 max-lg:pt-28">
             <div className="max-w-5xl mx-auto">
-
-                {/* Page header */}
-                <div className="mb-16">
-                    <p className="text-blue-400 font-mono tracking-[0.2em] uppercase text-[11px] mb-3">
-                        Projects
-                    </p>
-                    <h1 className="text-[36px] md:text-[52px] font-bold tracking-tight leading-none">
-                        Selected Work
-                    </h1>
-                    <p className="text-[#444444] mt-4 text-[15px] leading-relaxed max-w-xl">
-                        A curated mix of full-stack apps and focused builds across my{" "}
-                        <span className="text-[#666666]">{daysStreak}-day journey</span>.
-                    </p>
-                </div>
-
                 {/* ── Personal Projects ── */}
                 <div className="mb-20">
                     <SectionHeader
@@ -296,6 +107,7 @@ export default function Projects() {
                         title="Side Projects"
                         description="Things I built out of curiosity, to learn, or to solve a real problem."
                     />
+
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {PERSONAL_PROJECTS.map((project) => (
                             <ProjectCard key={project.title} project={project} />
@@ -304,12 +116,13 @@ export default function Projects() {
                 </div>
 
                 {/* ── Freelance Projects ── */}
-                <div className="pt-8 border-t border-white/[0.05]">
+                <div className="pt-8 border-t border-white/5">
                     <SectionHeader
                         label="Freelance"
                         title="Client Work"
                         description="Real briefs, real clients, real deadlines."
                     />
+
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {FREELANCE_PROJECTS.map((project) => (
                             <FreelanceCard key={project.title} project={project} />
