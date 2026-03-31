@@ -99,7 +99,7 @@ export default function Projects() {
 
     return (
         <div className="w-full min-h-screen bg-[#0a0a0a] text-white p-6 lg:p-16 max-lg:pt-28">
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-4xl mx-auto">
                 {/* ── Personal Projects ── */}
                 <div className="mb-20">
                     <SectionHeader

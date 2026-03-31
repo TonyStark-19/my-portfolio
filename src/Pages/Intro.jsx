@@ -43,10 +43,10 @@ export default function Intro() {
                 <div className="absolute bottom-0 left-0 right-0 h-40 bg-linear-to-t from-[#0a0a0a] to-transparent" />
             </div>
 
-            <div className="relative z-10 w-full flex-1 p-10 lg:p-20 max-lg:pt-28 max-[500px]:p-5 flex flex-col justify-center">
+            <div className="max-w-5xl mx-auto relative z-10 w-full flex-1 p-10 lg:p-20 max-lg:pt-28 max-[500px]:p-5 flex flex-col justify-center">
 
                 {/* ── Hero ── */}
-                <div className="max-w-4xl">
+                <div className="max-w-5xl">
                     <p className="text-[#555555] text-[13px] font-mono tracking-[0.2em] uppercase mb-4">
                         Available for work
                         <span className="inline-block ml-2 w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse -translate-y-px" />

@@ -8,14 +8,14 @@ const SKILL_SECTIONS = [
     {
         title: "Frontend Development",
         skills: [
-            { img: "/images/Skills/HTML5.png", label: "HTML5" },
-            { img: "/images/Skills/CSS3.png", label: "CSS3" },
-            { img: "/images/Skills/JavaScript.png", label: "JavaScript" },
             { img: "/images/Skills/React.png", label: "React" },
             { img: "/images/Skills/Tailwind.png", label: "Tailwind CSS" },
             { img: "/images/Skills/Bootstrap.png", label: "Bootstrap" },
             { img: "/images/Skills/Vite.js.png", label: "Vite" },
             { img: "/images/Skills/TypeScript.png", label: "TypeScript" },
+            { img: "/images/Skills/HTML5.png", label: "HTML5" },
+            { img: "/images/Skills/CSS3.png", label: "CSS3" },
+            { img: "/images/Skills/JavaScript.png", label: "JavaScript" },
         ],
     },
     {
@@ -44,9 +44,9 @@ const SKILL_SECTIONS = [
     {
         title: "Languages, Tools & Platforms",
         skills: [
+            { img: "/images/Skills/Java.png", label: "Java" },
             { img: "/images/Skills/C.png", label: "C" },
             { img: "/images/Skills/Cpp.png", label: "C++" },
-            { img: "/images/Skills/Java.png", label: "Java" },
             { img: "/images/Skills/Git.png", label: "Git" },
             { img: "/images/Skills/GitHub.png", label: "GitHub" },
             { img: "/images/Skills/VS.png", label: "VS Code" },
@@ -58,7 +58,7 @@ const SKILL_SECTIONS = [
 export default function Skills() {
     return (
         <div className="w-full min-h-screen bg-[#0a0a0a] text-white p-6 lg:p-16 max-lg:pt-28">
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-4xl mx-auto">
 
                 {/* Header */}
                 <div className="mb-12">

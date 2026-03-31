@@ -1,112 +1,190 @@
-// import react icons
 import { FaQuoteLeft } from "react-icons/fa";
 import { MdOutlineAutoFixHigh, MdOutlineSelfImprovement, MdOutlineMenuBook, MdOutlineArrowForward } from "react-icons/md";
 import { HiOutlineSparkles } from "react-icons/hi";
-
-// import link
 import { Link } from "react-router-dom";
 
-// import components
-import HobbyCard from "../Components/HobbyBox";
 import useDaysStreak from "../Components/Footer/useDaysStreak";
 import Footer from "../Components/Footer/Footer";
 
-// about page component
+// ─── Constants ────────────────────────────────────────────────────────────────
+
+const STREAK_START = Date.UTC(2024, 6, 9);
+
+const HOBBIES = [
+    { icon: MdOutlineSelfImprovement, title: "Zen", desc: "Meditation & Fitness", color: "text-blue-400", bg: "bg-blue-400/10", border: "hover:border-blue-400/20" },
+    { icon: MdOutlineMenuBook, title: "Literary", desc: "Poetry & Reading", color: "text-purple-400", bg: "bg-purple-400/10", border: "hover:border-purple-400/20" },
+    { icon: HiOutlineSparkles, title: "Spirit", desc: "Travel & Music", color: "text-amber-400", bg: "bg-amber-400/10", border: "hover:border-amber-400/20" },
+    { icon: FaQuoteLeft, title: "Wit", desc: "Articles & Humor", color: "text-emerald-400", bg: "bg-emerald-400/10", border: "hover:border-emerald-400/20" },
+];
+
+// ─── Sub-components ───────────────────────────────────────────────────────────
+
+function HobbyCard({ icon: Icon, title, desc, color, bg, border }) {
+    return (
+        <div className={`flex flex-col items-center justify-center gap-3 p-6 rounded-2xl text-center
+            bg-white/[0.02] border border-white/[0.06] ${border}
+            hover:bg-white/[0.04] transition-all duration-200 group`}>
+            <div className={`w-10 h-10 rounded-xl ${bg} flex items-center justify-center
+                group-hover:scale-110 transition-transform duration-200`}>
+                <Icon className={`text-[18px] ${color}`} />
+            </div>
+            <div>
+                <h5 className="text-[13px] font-semibold text-white/80">{title}</h5>
+                <p className="text-[11px] font-mono text-[#3a3a3a] uppercase tracking-widest mt-0.5">{desc}</p>
+            </div>
+        </div>
+    );
+}
+
+function StatBlock({ value, label }) {
+    return (
+        <div className="flex flex-col">
+            <span className="text-[28px] font-bold text-white tracking-tight leading-none">{value}</span>
+            <span className="text-[11px] font-mono text-[#3a3a3a] uppercase tracking-widest mt-1">{label}</span>
+        </div>
+    );
+}
+
+function PhilosophyCard({ icon: Icon, title, description, iconColor }) {
+    return (
+        <div className="flex flex-col gap-4 p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06]
+            hover:bg-white/[0.04] hover:border-white/[0.1] transition-all duration-200 group">
+            <div className={`text-[20px] ${iconColor}`}>
+                <Icon />
+            </div>
+            <div>
+                <h4 className="text-[14px] font-semibold text-white/90">{title}</h4>
+                <p className="text-[13px] text-[#555555] leading-relaxed mt-1.5 group-hover:text-[#777777] transition-colors duration-200">
+                    {description}
+                </p>
+            </div>
+        </div>
+    );
+}
+
+// ─── Main Component ───────────────────────────────────────────────────────────
+
 export default function About() {
-    // Calculate days streak dynamically
-    const daysStreak = useDaysStreak(Date.UTC(2024, 6, 9));
+    const daysStreak = useDaysStreak(STREAK_START);
 
     return (
-        <div className="w-full min-h-screen bg-[#0a0a0a] text-white p-6 lg:p-16 max-lg:pt-30">
-            <div className="max-w-6xl mx-auto">
+        <div className="w-full min-h-screen bg-[#0a0a0a] text-white p-6 lg:p-16 max-lg:pt-28">
+            <div className="max-w-4xl mx-auto">
+
+                {/* Header */}
                 <div className="mb-12">
-                    <h2 className="text-blue-400 font-mono tracking-widest uppercase text-sm mb-2">About Me</h2>
-                    <h1 className="text-5xl font-bold tracking-tighter">Identity & Journey</h1>
+                    <p className="text-blue-400 font-mono tracking-[0.2em] uppercase text-[11px] mb-3">
+                        About Me
+                    </p>
+                    <h1 className="text-[36px] md:text-[52px] font-bold tracking-tight leading-none">
+                        Identity & Journey
+                    </h1>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-6 md:grid-rows-auto gap-4">
+                {/* ── Main grid ── */}
+                <div className="grid grid-cols-1 lg:grid-cols-5 gap-4">
 
-                    <div className="md:col-span-2 space-y-4">
-                        {/* Profile Image Block */}
-                        <div className="relative group rounded-[2.5rem] overflow-hidden border border-[#222222] h-112.5">
+                    {/* Left col — profile + connect */}
+                    <div className="lg:col-span-2 flex flex-col gap-4">
+
+                        {/* Profile image */}
+                        <div className="relative group rounded-2xl h-105 overflow-hidden border border-white/[0.06] aspect-[3/4]">
                             <img
                                 src="/images/Other/profile.jpg"
                                 alt="Aditya Chandel"
                                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                             />
-                            <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent opacity-60" />
-                            <div className="absolute bottom-8 left-8">
-                                <h3 className="text-2xl font-bold">Aditya Chandel</h3>
-                                <p className="text-blue-400 text-sm italic">Full Stack Developer</p>
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+                            <div className="absolute bottom-5 left-5">
+                                <h3 className="text-[16px] font-semibold text-white">Aditya Chandel</h3>
+                                <p className="text-blue-400 text-[12px] font-mono mt-0.5">Full Stack Developer</p>
                             </div>
                         </div>
 
-                        {/* Connect With Me Block */}
-                        <Link to="/connect" className="block group">
-                            <div className="bg-blue-600 hover:bg-blue-500 p-8 rounded-[2.5rem] transition-all duration-300 flex items-center justify-between">
+                        {/* Connect CTA */}
+                        <Link to="/connect" className="group">
+                            <div className="flex items-center justify-between p-6 rounded-2xl bg-blue-600/90
+                                hover:bg-blue-500 active:scale-[0.98] transition-all duration-200">
                                 <div>
-                                    <h4 className="text-2xl font-bold text-white">Connect with me</h4>
-                                    <p className="text-blue-100/70 text-sm mt-1">Let's build something together</p>
+                                    <h4 className="text-[15px] font-semibold text-white">Connect with me</h4>
+                                    <p className="text-blue-100/60 text-[12px] mt-0.5">Let's build something together</p>
                                 </div>
-                                <div className="bg-white/20 p-3 rounded-full group-hover:translate-x-2 transition-transform">
-                                    <MdOutlineArrowForward className="text-2xl text-white" />
+                                <div className="w-9 h-9 rounded-xl bg-white/15 flex items-center justify-center
+                                    group-hover:translate-x-1 transition-transform duration-200">
+                                    <MdOutlineArrowForward className="text-[18px] text-white" />
                                 </div>
                             </div>
                         </Link>
                     </div>
 
-                    <div className="md:col-span-4 grid grid-cols-1 md:grid-cols-4 gap-4">
-                        {/* Hero Streak Block */}
-                        <div className="md:col-span-4 bg-[#111111] border border-[#222222] rounded-[2.5rem] p-10 flex flex-col justify-center relative
-                        overflow-hidden group">
-                            <div className="relative z-10">
-                                <span className="bg-blue-500/10 text-blue-400 text-xs font-mono px-3 py-1 rounded-full border border-blue-500/20">
-                                    Non-Stop Progress</span>
-                                <h3 className="text-7xl md:text-8xl font-black mt-4 group-hover:text-blue-400 transition-colors">
-                                    {daysStreak} <span className="text-3xl font-light text-[#444]">Days</span>
-                                </h3>
-                                <p className="text-[#888888] text-xl mt-4 max-w-md leading-relaxed">
-                                    A journey defined by <span className="text-white font-medium">unwavering consistency</span>.
+                    {/* Right col */}
+                    <div className="lg:col-span-3 flex flex-col gap-4">
+
+                        {/* Streak hero block */}
+                        <div className="relative overflow-hidden flex flex-col justify-between gap-6 p-7 rounded-2xl
+                            bg-white/[0.02] border border-white/[0.06] hover:border-white/[0.1] transition-all duration-300 group">
+
+                            <div className="flex items-center gap-2">
+                                <span className="text-[10px] font-mono tracking-widest uppercase px-2.5 py-1
+                                    rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400">
+                                    Non-Stop Progress
+                                </span>
+                            </div>
+
+                            <div>
+                                <div className="flex items-baseline gap-3">
+                                    <span className="text-[72px] md:text-[88px] font-black leading-none tracking-tighter
+                                        group-hover:text-blue-400 transition-colors duration-300">
+                                        {daysStreak}
+                                    </span>
+                                    <span className="text-[20px] font-light text-[#333333]">Days</span>
+                                </div>
+                                <p className="text-[14px] text-[#555555] mt-2 leading-relaxed max-w-sm group-hover:text-[#777777] transition-colors duration-300">
+                                    A journey defined by{" "}
+                                    <span className="text-white/70">unwavering consistency</span>.
                                     Turning small wins into major milestones.
                                 </p>
                             </div>
-                            <HiOutlineSparkles className="absolute -right-10 -bottom-10 text-white/5 text-[15rem] group-hover:rotate-12 transition-transform
-                            duration-700" />
+
+                            {/* Stats row */}
+                            <div className="flex items-center gap-8 pt-4 border-t border-white/[0.05]">
+                                <StatBlock value="6+" label="Projects" />
+                                <StatBlock value="4+" label="Internships" />
+                                <StatBlock value="2+" label="Freelance" />
+                            </div>
+
+                            {/* Decorative sparkle */}
+                            <HiOutlineSparkles className="absolute -right-8 -bottom-8 text-white/[0.03] text-[12rem]
+                                group-hover:rotate-12 transition-transform duration-700 pointer-events-none" />
                         </div>
 
-                        {/* Philosophy Block */}
-                        <div className="md:col-span-2 bg-[#111111] border border-[#222222] rounded-[2.5rem] p-8 hover:border-blue-500/30 transition-all group">
-                            <MdOutlineSelfImprovement className="text-blue-400 text-3xl mb-4" />
-                            <h4 className="text-xl font-bold mb-4">The 1% Philosophy</h4>
-                            <p className="text-sm text-[#666666] leading-relaxed">
-                                I focus on detailed, marginal gains. Sharing knowledge while continuously evolving through <span className="text-white">
-                                    daily practice</span>.
-                            </p>
-                        </div>
-
-                        {/* Craft Block */}
-                        <div className="md:col-span-2 bg-[#111111] border border-[#222222] rounded-[2.5rem] p-8 hover:border-blue-500/30 transition-all group">
-                            <MdOutlineAutoFixHigh className="text-emerald-500 text-3xl mb-4" />
-                            <h4 className="text-xl font-bold mb-4">Refined Craft</h4>
-                            <p className="text-sm text-[#666666] leading-relaxed">
-                                Fascinated by the gears behind the screen. I revisit old codebases to update them with <span className="text-white">
-                                    best practices</span>.
-                            </p>
+                        {/* Philosophy cards */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <PhilosophyCard
+                                icon={MdOutlineSelfImprovement}
+                                title="The 1% Philosophy"
+                                description="I focus on marginal gains — sharing knowledge while continuously evolving through daily practice."
+                                iconColor="text-blue-400"
+                            />
+                            <PhilosophyCard
+                                icon={MdOutlineAutoFixHigh}
+                                title="Refined Craft"
+                                description="Fascinated by what's behind the screen. I revisit old codebases to update them with best practices."
+                                iconColor="text-emerald-400"
+                            />
                         </div>
                     </div>
-
-                    {/* Hobbies Section: Separate Boxes */}
-                    <div className="md:col-span-6 grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-                        <HobbyCard icon={<MdOutlineSelfImprovement />} title="Zen" desc="Meditation & Fitness" />
-                        <HobbyCard icon={<MdOutlineMenuBook />} title="Literary" desc="Poetry & Reading" />
-                        <HobbyCard icon={<HiOutlineSparkles />} title="Spirit" desc="Travel & Music" />
-                        <HobbyCard icon={<FaQuoteLeft />} title="Wit" desc="Articles & Humor" />
-                    </div>
-
                 </div>
+
+                {/* ── Hobbies ── */}
+                <div className="mt-4 grid grid-cols-2 md:grid-cols-4 gap-4">
+                    {HOBBIES.map((h) => (
+                        <HobbyCard key={h.title} {...h} />
+                    ))}
+                </div>
+
             </div>
 
-            {/* footer component */}
             <Footer />
         </div>
     );
