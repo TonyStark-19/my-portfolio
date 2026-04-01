@@ -21,6 +21,7 @@ export default function SingleCard({ exp }) {
                     </div>
                 </div>
 
+                {/* Role Entry */}
                 <RoleEntry
                     role={exp.role}
                     company_label={exp.company}

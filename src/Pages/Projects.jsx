@@ -108,7 +108,7 @@ export default function Projects() {
                         description="Things I built out of curiosity, to learn, or to solve a real problem."
                     />
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
                         {PERSONAL_PROJECTS.map((project) => (
                             <ProjectCard key={project.title} project={project} />
                         ))}
@@ -123,7 +123,7 @@ export default function Projects() {
                         description="Real briefs, real clients, real deadlines."
                     />
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
                         {FREELANCE_PROJECTS.map((project) => (
                             <FreelanceCard key={project.title} project={project} />
                         ))}

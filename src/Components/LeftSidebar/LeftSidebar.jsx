@@ -1,5 +1,7 @@
+// import uselocation hook
+import { useLocation } from "react-router-dom";
+
 // import icons
-import { useLocation, Link } from "react-router-dom";
 import { FaHome, FaRegUser, FaCode, FaProjectDiagram, FaBriefcase } from "react-icons/fa";
 import { IoShareSocialOutline } from "react-icons/io5";
 import { MdOutlineArticle } from "react-icons/md";
@@ -60,6 +62,7 @@ export default function LeftSidebar({ isOpen, setIsOpen }) {
 
             {/* Scrollable content */}
             <div className="flex-1 flex flex-col overflow-y-auto custom-scrollbar">
+                {/* Profile Card */}
                 <ProfileCard />
 
                 {/* Nav */}

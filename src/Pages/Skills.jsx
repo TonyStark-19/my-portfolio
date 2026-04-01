@@ -19,13 +19,14 @@ const SKILL_SECTIONS = [
         ],
     },
     {
-        title: "Backend & Database",
+        title: "Backend & Cloud",
         skills: [
             { img: "/images/Skills/Node.js.png", label: "Node.js" },
             { img: "/images/Skills/Express.png", label: "Express" },
             { img: "/images/Skills/MongoDB.png", label: "MongoDB" },
             { img: "/images/Skills/sql.jpg", label: "SQL" },
             { img: "/images/Skills/Postman.png", label: "Postman" },
+            { img: "/images/Skills/AWS.png", label: "AWS" },
         ],
     },
     {

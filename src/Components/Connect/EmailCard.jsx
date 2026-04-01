@@ -44,7 +44,7 @@ export default function EmailCard({ email }) {
                 <a
                     href={`mailto:${email}`}
                     className="flex items-center justify-center gap-2 bg-white text-black px-6 py-2.5 rounded-xl text-[13px] font-semibold
-                        hover:bg-blue-400 hover:text-white active:scale-[0.97] transition-all duration-200 flex-1"
+                    hover:bg-blue-400 hover:text-white active:scale-[0.97] transition-all duration-200 flex-1"
                 >
                     <LuSend size={13} /> Send Email
                 </a>
@@ -52,7 +52,7 @@ export default function EmailCard({ email }) {
                 <button
                     onClick={copyToClipboard}
                     className="flex items-center justify-center gap-2 border border-white/8 text-[#777777] px-6 py-2.5 rounded-xl text-[13px] font-medium
-                        hover:border-white/15 hover:text-white active:scale-[0.97] transition-all duration-200 flex-1 cursor-pointer"
+                    hover:border-white/15 hover:text-white active:scale-[0.97] transition-all duration-200 flex-1 cursor-pointer"
                 >
                     {copied
                         ? <><LuCheck size={13} className="text-green-400" /><span className="text-green-400">Copied!</span></>

@@ -13,7 +13,7 @@ export default function SocialCard({ social }) {
         >
             <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-lg bg-white/4 border border-white/[0.07] flex items-center justify-center
-                    text-[#666666] group-hover:text-white transition-colors duration-200">
+                text-[#666666] group-hover:text-white transition-colors duration-200">
                     <Icon size={14} />
                 </div>
 

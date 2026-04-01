@@ -17,7 +17,7 @@ import { Route, Routes } from "react-router-dom";
 import { useRef, useState } from "react";
 
 // import components
-import ScrollToTop from "../Components/Scroltotop.jsx";
+import ScrollToTop from "../Components/utils/Scroltotop.jsx";
 import TopNavbar from "../Components/Navbar/Navbar.jsx";
 
 // Main Page Component

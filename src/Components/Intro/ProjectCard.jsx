@@ -1,5 +1,6 @@
 // import icons
-import { LuGithub, LuArrowRight } from "react-icons/lu";
+import { LuGithub } from "react-icons/lu";
+import { GoLinkExternal } from "react-icons/go";
 
 // project card component for featured projects section
 export default function ProjectCard({ project }) {
@@ -8,10 +9,7 @@ export default function ProjectCard({ project }) {
         : "hover:border-emerald-500/30";
 
     return (
-        <a
-            href={project.live}
-            target="_blank"
-            rel="noopener noreferrer"
+        <div
             className={`group flex flex-col bg-white/2 border border-white/6 rounded-2xl overflow-hidden
             transition-all duration-300 hover:bg-white/4 ${accentHover}`}
         >
@@ -30,12 +28,19 @@ export default function ProjectCard({ project }) {
                 <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2.5">
                         <span className="text-[17px]">{project.icon}</span>
+
                         <h3 className="text-[14px] font-semibold text-white/90 tracking-wide">
                             {project.title}
                         </h3>
                     </div>
 
-                    <LuArrowRight className="text-[13px] text-[#333333] group-hover:text-white/40 group-hover:translate-x-0.5 transition-all duration-200" />
+                    <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <GoLinkExternal className="text-[13px] text-[#333333] group-hover:text-white/40 group-hover:translate-x-0.5 transition-all duration-200" />
+                    </a>
                 </div>
 
                 <p className="text-[13px] text-[#555555] leading-relaxed group-hover:text-[#777777] transition-colors duration-200">
@@ -54,6 +59,6 @@ export default function ProjectCard({ project }) {
                     Source
                 </a>
             </div>
-        </a>
+        </div>
     );
 }

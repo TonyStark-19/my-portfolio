@@ -36,6 +36,7 @@ export default function FeaturedProjects() {
             <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-3">
                     <div className="w-px h-5 bg-white/20 rounded-full" />
+                    
                     <h4 className="text-[18px] text-white font-medium tracking-tight">
                         Featured Projects
                     </h4>
@@ -50,7 +51,7 @@ export default function FeaturedProjects() {
                 </Link>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
                 {FEATURED_PROJECTS.map((project) => (
                     <ProjectCard key={project.title} project={project} />
                 ))}

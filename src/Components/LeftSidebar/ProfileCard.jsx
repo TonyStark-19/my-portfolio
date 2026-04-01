@@ -13,7 +13,7 @@ export default function ProfileCard() {
                 </div>
 
                 {/* Online badge */}
-                <span className="absolute -bottom-1 -right-1 flex items-center justify-center w-5 h-5">
+                <span className="absolute -bottom-2 -right-2 flex items-center justify-center w-5 h-5">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-60" />
                     <span className="relative flex rounded-full h-3.5 w-3.5 bg-green-500 ring-2 ring-[#111111]" />
                 </span>

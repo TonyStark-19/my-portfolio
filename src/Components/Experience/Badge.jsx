@@ -10,7 +10,7 @@ export default function Badge({ label, isPromotion }) {
             </span>
         );
     }
-    
+
     return (
         <span className="inline-flex items-center text-[10px] font-mono tracking-widest uppercase px-2.5 py-1
         rounded-full bg-white/4 border border-white/[0.07] text-[#555555]">

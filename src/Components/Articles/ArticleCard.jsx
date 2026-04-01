@@ -30,6 +30,7 @@ export default function ArticleCard({ article }) {
                     {article.tags.map((tag) => (
                         <ArticleTag key={tag} label={tag} />
                     ))}
+
                     {article.featured && <ArticleTag label="Latest" variant="featured" />}
                 </div>
 

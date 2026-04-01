@@ -27,9 +27,11 @@ export default function RoleEntry({ role, company_label, badge, duration, locati
                         <p className="text-[12px] text-[#444444] font-mono">{company_label}</p>
                     </div>
 
+                    {/* Meta Info */}
                     <MetaInfo duration={duration} location={location} />
                 </div>
 
+                {/* Description Card */}
                 <DescriptionCard description={description} skills={skills} />
             </div>
         </div>

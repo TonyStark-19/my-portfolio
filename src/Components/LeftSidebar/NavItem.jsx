@@ -39,7 +39,7 @@ export default function NavItem({ item, isActive, onClick }) {
                 >
                     <Icon />
                 </span>
-                
+
                 <span className="text-[15px] font-medium tracking-[0.01em]">
                     {item.name}
                 </span>

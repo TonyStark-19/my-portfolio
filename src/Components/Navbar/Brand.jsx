@@ -1,3 +1,6 @@
+// import link
+import { Link } from "react-router-dom";
+
 // brand component
 export default function Brand() {
     return (
@@ -7,9 +10,11 @@ export default function Brand() {
                 <span className="text-[12px] font-semibold text-white/70 tracking-tight">AC</span>
             </div>
 
-            <span className="text-[16px] font-semibold text-white/90 tracking-wide">
-                Aditya Chandel
-            </span>
+            <Link to="/">
+                <span className="text-[16px] font-semibold text-white/90 tracking-wide">
+                    Aditya Chandel
+                </span>
+            </Link>
         </div>
     );
 }

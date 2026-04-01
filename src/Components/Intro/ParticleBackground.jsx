@@ -17,7 +17,7 @@ export default function ParticleBackground() {
         resize();
         window.addEventListener("resize", resize);
 
-        const COUNT = 300;
+        const COUNT = 100;
         const particles = Array.from({ length: COUNT }, () => ({
             x: Math.random() * canvas.width,
             y: Math.random() * canvas.height,

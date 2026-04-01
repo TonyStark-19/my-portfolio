@@ -9,7 +9,7 @@ const EXPERIENCES = [
                 role: "Software Developer Intern",
                 company_label: "Krutrim Insights",
                 badge: "New Role",
-                duration: "Apr 2026 - Present",
+                duration: "March 2026 - Present",
                 location: "Remote",
                 description: [
                     "Selected for a project-based Software Developer Internship based on performance as Campus Ambassador.",
@@ -131,9 +131,13 @@ export default function Experience() {
                         History
                     </p>
 
-                    <h1 className="text-[36px] md:text-[52px] font-bold tracking-tight leading-none">
+                    <h1 className="text-[36px] md:text-[48px] font-bold tracking-tight leading-none">
                         Experience.
                     </h1>
+
+                    <p className="text-[#444444] mt-3 text-[14px] italic">
+                        A timeline of my work, contributions, and the experiences that shaped my journey.
+                    </p>
                 </div>
 
                 {/* Timeline */}

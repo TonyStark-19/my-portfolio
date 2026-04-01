@@ -22,6 +22,7 @@ export default function Footer() {
                     All rights reserved.
                 </p>
 
+                {/* Streak Badge */}
                 <StreakBadge days={daysStreak} />
             </div>
         </footer>
