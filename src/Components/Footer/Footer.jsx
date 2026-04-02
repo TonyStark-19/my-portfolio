@@ -19,7 +19,7 @@ export default function Footer() {
                     © {year}{" "}
                     <span className="text-[#606060] font-medium">Aditya Chandel</span>
                     <span className="mx-2 text-[#2a2a2a]">·</span>
-                    All rights reserved.
+                    Made with <span className="text-[#663232]">♥</span>
                 </p>
 
                 {/* Streak Badge */}
