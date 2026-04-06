@@ -9,14 +9,24 @@ const STREAK_START = Date.UTC(2024, 6, 9);
 // articles data
 const ARTICLES = [
     {
-        title: "How to be Consistent?",
-        description: "How to be consistent with your journey? The biggest struggle when learning a new skill is staying consistent. We all start with high energy...",
-        date: "Jun 18, 2025",
+        title: "Learning by Building",
+        description: "I built 79 C programs before I truly understood coding. Not from tutorials. Not from docs. But by building.",
+        date: "April 06, 2026",
+        readTime: "5 min read",
+        link: "https://medium.com/@adityachandel371/learning-by-building-b591e7f4646e",
+        image: "/images/Articles/coding.jpg",
+        tags: ["Learning by Building", "Web Development", "Programming"],
+        featured: true,
+    },
+    {
+        title: "How to Be Consistent",
+        description: "The biggest struggle when learning a new skill is staying consistent. We all start with high energy, but maintaining it is the real challenge.",
+        date: "June 18, 2025",
         readTime: "7 min read",
         link: "https://medium.com/@adityachandel371/how-to-be-consistent-c080f45e0f1d",
         image: "/images/Articles/Consistency.png",
-        tags: ["Productivity", "Learning"],
-        featured: true,
+        tags: ["Productivity", "Self Growth", "Consistency"],
+        featured: false,
     },
 ];
 
