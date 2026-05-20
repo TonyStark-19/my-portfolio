@@ -1,6 +1,21 @@
 // experience data structure supports both single roles and progressions (multiple roles at same org)
 const EXPERIENCES = [
     {
+        type: "single",
+        role: "AI Product Developer",
+        company: "Shikhram AI",
+        badge: "Full-time",
+        duration: "May 2026 - Present",
+        location: "Delhi, India · Hybrid",
+        description: [
+            "Working as an AI Product Developer at Shikhram AI, building and improving AI-powered products and scalable web applications.",
+            "Contributing across frontend, backend, APIs, and AI-powered workflows in a fast-paced startup environment.",
+            "Focused on building impactful user experiences, scalable systems, and continuously improving product quality.",
+        ],
+        skills: ["AI", "React", "Node.js", "MongoDB", "JavaScript", "Product Development"],
+        logo: "/images/Experience/Shikhram.png",
+    },
+    {
         type: "progression",
         company: "Krutrim Insights",
         logo: "/images/Experience/Krutrim.jpg",
@@ -39,12 +54,12 @@ const EXPERIENCES = [
         role: "Web Development Intern",
         company: "PHICSIT InfoTech Pvt. Ltd.",
         badge: "Internship",
-        duration: "Mar 2026 - Present",
+        duration: "Mar 2026 - Apr 2026",
         location: "Remote",
         description: [
-            "Selected through Phase 2 of the Open Source Connect program after an interview process among 4000+ participants.",
-            "Working on real-world web development tasks while gaining practical industry exposure.",
-            "Collaborating with mentors and developers to improve code quality, development workflows, and problem-solving skills.",
+            "Selected through Phase 2 of the Open Source Connect program after competing among 4000+ participants.",
+            "Worked on real-world MERN stack projects while gaining practical industry exposure under mentorship.",
+            "Improved overall UI/UX, performed code cleanup for better readability and maintainability, and contributed to enhancing development workflows.",
         ],
         skills: ["Web Development", "JavaScript", "React", "Git", "Collaboration"],
         logo: "/images/Experience/PHICSIT.jpg",
@@ -58,11 +73,12 @@ const EXPERIENCES = [
                 role: "Web Development Intern",
                 company_label: "PHICSIT InfoTech Pvt. Ltd. · via OSCG 2026",
                 badge: "Phase 2",
-                duration: "Mar 2026 - Present",
+                duration: "Mar 2026 - Apr 2026",
                 location: "Remote",
                 description: [
                     "Selected for Phase 2 of Open Source Connect Global (OSCG 2026) based on consistent performance and contributions.",
-                    "Working as a Web Development Intern with PHICSIT InfoTech Pvt. Ltd., gaining hands-on experience in MERN stack development under mentorship.",
+                    "Worked as a Web Development Intern with PHICSIT InfoTech Pvt. Ltd., gaining hands-on experience in MERN stack development under mentorship.",
+                    "Contributed to improving overall UI/UX, performed code cleanup for better readability and maintainability, and enhanced project structure for smoother development workflows.",
                 ],
                 skills: ["Web Development", "React", "Node.js", "MongoDB", "Git"],
                 isPromotion: true,
