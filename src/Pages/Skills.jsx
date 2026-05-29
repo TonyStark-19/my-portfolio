@@ -9,6 +9,7 @@ const SKILL_SECTIONS = [
         title: "Frontend Development",
         skills: [
             { img: "/images/Skills/React.png", label: "React" },
+            { img: "/images/Skills/React.png", label: "React Native" },
             { img: "/images/Skills/Tailwind.png", label: "Tailwind CSS" },
             { img: "/images/Skills/Bootstrap.png", label: "Bootstrap" },
             { img: "/images/Skills/Vite.js.png", label: "Vite" },
@@ -23,6 +24,8 @@ const SKILL_SECTIONS = [
         skills: [
             { img: "/images/Skills/Node.js.png", label: "Node.js" },
             { img: "/images/Skills/Express.png", label: "Express" },
+            { img: "/images/Skills/FastAPI.png", label: "FastAPI" },
+            { img: "/images/Skills/Supabase.jpg", label: "Supabase" },
             { img: "/images/Skills/MongoDB.png", label: "MongoDB" },
             { img: "/images/Skills/sql.jpg", label: "SQL" },
             { img: "/images/Skills/Postman.png", label: "Postman" },
