@@ -12,7 +12,7 @@ const EXPERIENCES = [
             "Contributing across frontend, backend, APIs, and AI-powered workflows in a fast-paced startup environment.",
             "Focused on building impactful user experiences, scalable systems, and continuously improving product quality.",
         ],
-        skills: ["AI", "React", "Node.js", "MongoDB", "JavaScript", "Product Development"],
+        skills: ["React Native", "Supabase", "Fastapi", "Python", "Expo"],
         logo: "/images/Experience/Shikhram.png",
     },
     {
@@ -24,13 +24,14 @@ const EXPERIENCES = [
                 role: "Software Developer Intern",
                 company_label: "Krutrim Insights",
                 badge: "New Role",
-                duration: "March 2026 - Present",
+                duration: "March 2026 - May 2026",
                 location: "Remote",
                 description: [
-                    "Selected for a project-based Software Developer Internship based on performance as Campus Ambassador.",
-                    "Contributing to development initiatives and gaining hands-on engineering experience within the organization.",
+                    "Built and deployed a full-stack website using React.js, Tailwind CSS, and AWS.",
+                    "Developed interconnected Admin, Mentor, and Student portal systems with scalable backend workflows.",
+                    "Worked with AWS Lambda, API Gateway, S3, and SES while solving complex integration and debugging challenges.",
                 ],
-                skills: ["Software Development", "Problem Solving", "Collaboration"],
+                skills: ["React.js", "Tailwind CSS", "AWS", "API Development", "Problem Solving", "System Design"],
                 isPromotion: true,
             },
             {
