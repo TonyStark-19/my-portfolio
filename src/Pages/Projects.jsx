@@ -9,10 +9,19 @@ import SectionHeader from "../Components/Projects/SectionHeader";
 const STREAK_START = Date.UTC(2024, 6, 9);
 
 // import icons
-import { LuLayers, LuDatabase, LuCode, LuFolderCode, LuBriefcase } from "react-icons/lu";
+import { LuLayers, LuDatabase, LuCode, LuFolderCode, LuBriefcase, LuBookOpen } from "react-icons/lu";
 
 // project data
 const PERSONAL_PROJECTS = [
+    {
+        title: "Bookora",
+        summary: "A full-stack book discovery platform featuring Google OAuth, live book search, personalized recommendations, wishlist management, cart functionality, and user activity tracking.",
+        tech: ["MongoDB", "Express", "React", "Node", "TypeScript", "Tailwind"],
+        image: "/images/Projects/Side-Projects/Bookora.png",
+        live: "https://bookora-hazel.vercel.app",
+        github: "https://github.com/TonyStark-19/Bookora",
+        icon: <LuBookOpen className="text-amber-400" />,
+    },
     {
         title: "DevStash",
         summary: "A full-stack MERN application for developers to save, explore, and contribute favorite resources across multiple domains.",
@@ -30,15 +39,6 @@ const PERSONAL_PROJECTS = [
         live: "https://learn-sql-eight.vercel.app/",
         github: "https://github.com/TonyStark-19/LearnSQL",
         icon: <LuDatabase className="text-emerald-400" />,
-    },
-    {
-        title: "Quizify",
-        summary: "Responsive React + Tailwind interview quiz platform with multi-topic quizzes, instant scoring, answer review, and light/dark mode.",
-        tech: ["React JS", "Tailwind CSS", "React Router"],
-        image: "/images/Projects/Side-Projects/Quiz.png",
-        live: "https://quiz-app-drab-beta.vercel.app/",
-        github: "https://github.com/TonyStark-19/Quiz-app",
-        icon: <LuCode className="text-purple-400" />,
     },
     {
         title: "C-Coding Website",
