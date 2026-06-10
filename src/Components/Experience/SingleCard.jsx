@@ -13,7 +13,10 @@ export default function SingleCard({ exp }) {
             <div className="flex flex-col gap-4">
                 {/* Company header */}
                 <div className="flex items-center gap-3">
-                    <CompanyLogo src={exp.logo} alt={exp.company} />
+                    <CompanyLogo
+                        src={exp.logo}
+                        alt={exp.company}
+                    />
 
                     <div>
                         <p className="text-[13px] text-[#666666] font-medium">{exp.company}</p>

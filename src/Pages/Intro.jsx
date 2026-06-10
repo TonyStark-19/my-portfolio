@@ -36,15 +36,13 @@ export default function Intro() {
 
     return (
         <div className="relative w-full min-h-screen bg-[#0a0a0a] flex flex-col">
-
-            {/* Particle bg — hero only */}
+            {/* Particle bg */}
             <div className="absolute inset-0 h-screen overflow-hidden">
                 <ParticleBackground />
                 <div className="absolute bottom-0 left-0 right-0 h-40 bg-linear-to-t from-[#0a0a0a] to-transparent" />
             </div>
 
             <div className="max-w-5xl mx-auto relative z-10 w-full flex-1 p-10 lg:p-20 max-lg:pt-28 max-[500px]:p-5 flex flex-col justify-center">
-
                 {/* ── Hero ── */}
                 <div className="max-w-5xl">
                     <p className="text-[#555555] text-[13px] font-mono tracking-[0.2em] uppercase mb-4">
@@ -56,8 +54,10 @@ export default function Intro() {
                         Hi, I'm
                     </p>
 
-                    <h1 className="text-[13vw] sm:text-[80px] md:text-[96px] font-bold tracking-tighter leading-none
-                    bg-linear-to-r from-white via-white/80 to-white/25 bg-clip-text text-transparent">
+                    <h1
+                        className="text-[13vw] sm:text-[80px] md:text-[96px] font-bold tracking-tighter leading-none
+                        bg-linear-to-r from-white via-white/80 to-white/25 bg-clip-text text-transparent"
+                    >
                         Aditya Chandel
                     </h1>
 
@@ -74,17 +74,27 @@ export default function Intro() {
                     </p>
 
                     <div className="flex gap-3 mt-10 max-[500px]:flex-col">
-                        <Link to="/projects" className="max-[500px]:w-full">
-                            <button className="flex items-center justify-center gap-2 bg-white text-black px-7 py-3 rounded-xl text-[14px] font-semibold
-                            hover:bg-blue-400 hover:text-white active:scale-[0.97] transition-all duration-200 w-full group cursor-pointer">
+                        <Link
+                            to="/projects"
+                            className="max-[500px]:w-full"
+                        >
+                            <button
+                                className="flex items-center justify-center gap-2 bg-white text-black px-7 py-3 rounded-xl text-[14px] font-semibold
+                                hover:bg-blue-400 hover:text-white active:scale-[0.97] transition-all duration-200 w-full group cursor-pointer"
+                            >
                                 View Projects
                                 <LuArrowRight className="group-hover:translate-x-0.5 transition-transform duration-200" />
                             </button>
                         </Link>
 
-                        <Link to="/about" className="max-[500px]:w-full">
-                            <button className="flex items-center justify-center border border-white/10 text-[#888888] px-7 py-3 rounded-xl text-[14px] font-medium
-                            hover:border-white/20 hover:text-white active:scale-[0.97] transition-all duration-200 w-full cursor-pointer">
+                        <Link
+                            to="/about"
+                            className="max-[500px]:w-full"
+                        >
+                            <button
+                                className="flex items-center justify-center border border-white/10 text-[#888888] px-7 py-3 rounded-xl text-[14px] font-medium
+                                hover:border-white/20 hover:text-white active:scale-[0.97] transition-all duration-200 w-full cursor-pointer"
+                            >
                                 About me
                             </button>
                         </Link>
@@ -111,9 +121,14 @@ export default function Intro() {
                         and counting.
                     </p>
 
-                    <GitHubCard username={GITHUB_USERNAME} theme={GITHUB_THEME} />
+                    {/* github card */}
+                    <GitHubCard
+                        username={GITHUB_USERNAME}
+                        theme={GITHUB_THEME}
+                    />
                 </div>
 
+                {/* footer */}
                 <Footer />
             </div>
         </div>

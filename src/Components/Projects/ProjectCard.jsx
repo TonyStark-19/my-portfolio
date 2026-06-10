@@ -7,16 +7,18 @@ import TechTag from "./TechTag";
 // project card component
 export default function ProjectCard({ project }) {
     return (
-        <div className="group bg-white/2 border border-white/6 rounded-2xl overflow-hidden flex flex-col
-        hover:bg-white/4 hover:border-white/12 transition-all duration-300">
+        <div
+            className="group bg-white/2 border border-white/6 rounded-2xl overflow-hidden flex flex-col
+            hover:bg-white/4 hover:border-white/12 transition-all duration-300"
+        >
             {/* Thumbnail */}
             <div className="relative aspect-video overflow-hidden bg-[#111111]">
                 <img
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover object-top opacity-75 grayscale-[0.3]
-                        group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-[1.03]
-                        transition-all duration-500"
+                    group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-[1.03]
+                    transition-all duration-500"
                 />
 
                 <div className="absolute inset-0 bg-linear-to-t from-[#0a0a0a] via-transparent to-transparent" />
@@ -78,7 +80,10 @@ export default function ProjectCard({ project }) {
                 {/* Tech tags */}
                 <div className="flex flex-wrap gap-2 mt-auto pt-1">
                     {project.tech.map((t) => (
-                        <TechTag key={t} label={t} />
+                        <TechTag
+                            key={t}
+                            label={t}
+                        />
                     ))}
                 </div>
             </div>

@@ -18,10 +18,12 @@ export default function TypingText({ phrases }) {
             }, 55);
             return () => clearTimeout(t);
         }
+
         if (!deleting && charIdx === current.length) {
             const t = setTimeout(() => setDeleting(true), 1800);
             return () => clearTimeout(t);
         }
+
         if (deleting && charIdx > 0) {
             const t = setTimeout(() => {
                 setDisplay(current.slice(0, charIdx - 1));
@@ -29,6 +31,7 @@ export default function TypingText({ phrases }) {
             }, 28);
             return () => clearTimeout(t);
         }
+
         if (deleting && charIdx === 0) {
             setDeleting(false);
             setPhraseIdx((i) => (i + 1) % phrases.length);

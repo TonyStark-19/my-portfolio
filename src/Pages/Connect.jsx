@@ -55,7 +55,10 @@ export default function Connect() {
                     {/* Socials — narrower */}
                     <div className="lg:col-span-2 flex flex-col gap-2.5">
                         {SOCIALS.map((social) => (
-                            <SocialCard key={social.name} social={social} />
+                            <SocialCard
+                                key={social.name}
+                                social={social}
+                            />
                         ))}
                     </div>
                 </div>
@@ -64,9 +67,9 @@ export default function Connect() {
                 <p className="mt-16 text-center text-[#222222] text-[13px] font-mono italic tracking-wide">
                     "Your network is your net worth."
                 </p>
-
             </div>
 
+            {/* footer */}
             <Footer />
         </div>
     );

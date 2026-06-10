@@ -34,13 +34,20 @@ export default function MainPage() {
             <TopNavbar toggleSidebar={() => setIsSidebarOpen(true)} />
 
             {/* Left Sidebar */}
-            <LeftSidebar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
+            <LeftSidebar
+                isOpen={isSidebarOpen}
+                setIsOpen={setIsSidebarOpen}
+            />
 
             {/* Main Content Area */}
-            <div ref={scrollRef} className="flex-1 h-full overflow-y-auto">
+            <div
+                ref={scrollRef}
+                className="flex-1 h-full overflow-y-auto"
+            >
                 {/* Scroll to top button */}
                 <ScrollToTop scrollRef={scrollRef} />
 
+                {/* routes */}
                 <Routes>
                     <Route path="/" element={<Intro />} />
                     <Route path="/home" element={<Intro />} />

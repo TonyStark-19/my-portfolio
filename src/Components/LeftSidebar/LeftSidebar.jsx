@@ -27,16 +27,17 @@ export default function LeftSidebar({ isOpen, setIsOpen }) {
     const { pathname } = useLocation();
     const activePath = pathname;
 
+    // actice tab
     const isActive = (item) =>
         activePath === item.path || (activePath === "/" && item.slug === "home");
 
     return (
         <aside
-            className={`
-                fixed lg:sticky inset-0 lg:inset-auto top-0 left-0 z-50 h-screen w-full lg:w-80 bg-[#0e0e0e] border-r border-white/5
-                transform transition-transform duration-300 ease-out
-                ${isOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0
-                flex flex-col
+            className={` fixed lg:sticky inset-0 lg:inset-auto top-0 left-0 z-50 h-screen w-full lg:w-80 bg-[#0e0e0e] border-r border-white/5
+            transform transition-transform duration-300 ease-out
+            ${isOpen ? "translate-x-0"
+                    : "-translate-x-full"
+                } lg:translate-x-0flex flex-col
             `}
         >
             {/* Mobile header */}

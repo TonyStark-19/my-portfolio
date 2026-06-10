@@ -20,6 +20,7 @@ export default function ProjectCard({ project }) {
                     alt={project.title}
                     className="w-full h-full object-cover object-top opacity-75 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-500"
                 />
+
                 <div className="absolute inset-0 bg-linear-to-t from-[#0e0e0e] via-transparent to-transparent" />
             </div>
 

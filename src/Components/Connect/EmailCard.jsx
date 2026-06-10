@@ -8,6 +8,7 @@ import { LuSend, LuCopy, LuCheck, LuMail } from "react-icons/lu";
 export default function EmailCard({ email }) {
     const [copied, setCopied] = useState(false);
 
+    // copy to clipboard
     const copyToClipboard = () => {
         navigator.clipboard.writeText(email);
         setCopied(true);
@@ -15,8 +16,10 @@ export default function EmailCard({ email }) {
     };
 
     return (
-        <div className="flex flex-col justify-between gap-8 p-7 bg-white/2 border border-white/6 rounded-2xl
-            hover:border-white/10 transition-all duration-300 h-full">
+        <div
+            className="flex flex-col justify-between gap-8 p-7 bg-white/2 border border-white/6 rounded-2xl
+            hover:border-white/10 transition-all duration-300 h-full"
+        >
             {/* Icon + text */}
             <div className="flex flex-col gap-4">
                 <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">

@@ -7,7 +7,10 @@ export default function DescriptionCard({ description, skills }) {
         <div className="bg-white/2 border border-white/5 p-5 rounded-xl group-hover:border-white/10 transition-all duration-500">
             <ul className="space-y-3">
                 {description.map((item, i) => (
-                    <li key={i} className="text-[#555555] group-hover:text-[#777777] leading-relaxed text-[13px] flex gap-3 transition-colors duration-300">
+                    <li
+                        key={i}
+                        className="text-[#555555] group-hover:text-[#777777] leading-relaxed text-[13px] flex gap-3 transition-colors duration-300"
+                    >
                         <span className="text-blue-500/40 mt-0.5 shrink-0">▸</span>
                         {item}
                     </li>
@@ -16,7 +19,10 @@ export default function DescriptionCard({ description, skills }) {
 
             <div className="flex flex-wrap gap-3 mt-5 pt-4 border-t border-white/5">
                 {skills.map((skill) => (
-                    <SkillTag key={skill} label={skill} />
+                    <SkillTag
+                        key={skill}
+                        label={skill}
+                    />
                 ))}
             </div>
         </div>

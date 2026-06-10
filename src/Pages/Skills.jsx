@@ -63,7 +63,6 @@ export default function Skills() {
     return (
         <div className="w-full min-h-screen bg-[#0a0a0a] text-white p-6 lg:p-16 max-lg:pt-28">
             <div className="max-w-4xl mx-auto">
-
                 {/* Header */}
                 <div className="mb-12">
                     <p className="text-blue-400 font-mono tracking-[0.2em] uppercase text-[11px] mb-3">
@@ -82,7 +81,10 @@ export default function Skills() {
                 {/* Sections */}
                 <div className="space-y-4">
                     {SKILL_SECTIONS.map((section) => (
-                        <SkillSection key={section.title} title={section.title}>
+                        <SkillSection
+                            key={section.title}
+                            title={section.title}
+                        >
                             {section.skills.map((skill) => (
                                 <SkillCard
                                     key={skill.label}
@@ -95,6 +97,7 @@ export default function Skills() {
                 </div>
             </div>
 
+            {/* footer */}
             <Footer />
         </div>
     );

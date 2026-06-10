@@ -21,18 +21,28 @@ export default function RoleEntry({ role, company_label, badge, duration, locati
                                 {role}
                             </h3>
 
-                            <Badge label={badge} isPromotion={isPromotion} />
+                            {/* badge */}
+                            <Badge
+                                label={badge}
+                                isPromotion={isPromotion}
+                            />
                         </div>
 
                         <p className="text-[12px] text-[#444444] font-mono">{company_label}</p>
                     </div>
 
                     {/* Meta Info */}
-                    <MetaInfo duration={duration} location={location} />
+                    <MetaInfo
+                        duration={duration}
+                        location={location}
+                    />
                 </div>
 
                 {/* Description Card */}
-                <DescriptionCard description={description} skills={skills} />
+                <DescriptionCard
+                    description={description}
+                    skills={skills}
+                />
             </div>
         </div>
     );

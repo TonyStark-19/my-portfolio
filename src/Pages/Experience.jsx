@@ -161,12 +161,21 @@ export default function Experience() {
                 <div className="relative border-l border-white/5 ml-2">
                     {EXPERIENCES.map((exp) =>
                         exp.type === "progression"
-                            ? <ProgressionCard key={exp.company} exp={exp} />
-                            : <SingleCard key={exp.company} exp={exp} />
+                            ?
+                            <ProgressionCard
+                                key={exp.company}
+                                exp={exp}
+                            />
+                            :
+                            <SingleCard
+                                key={exp.company}
+                                exp={exp}
+                            />
                     )}
                 </div>
             </div>
 
+            {/* footer */}
             <Footer />
         </div>
     );

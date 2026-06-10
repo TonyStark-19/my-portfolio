@@ -28,19 +28,31 @@ export default function ArticleCard({ article }) {
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2">
                     {article.tags.map((tag) => (
-                        <ArticleTag key={tag} label={tag} />
+                        <ArticleTag
+                            key={tag}
+                            label={tag}
+                        />
                     ))}
 
-                    {article.featured && <ArticleTag label="Latest" variant="featured" />}
+                    {article.featured &&
+                        <ArticleTag
+                            label="Latest"
+                            variant="featured"
+                        />}
                 </div>
 
                 {/* Title */}
                 <div>
-                    <h2 className="text-[18px] font-semibold text-white/90 group-hover:text-white tracking-tight leading-snug
-                    flex items-start gap-2 transition-colors duration-200">
+                    <h2
+                        className="text-[18px] font-semibold text-white/90 group-hover:text-white tracking-tight leading-snug
+                        flex items-start gap-2 transition-colors duration-200"
+                    >
                         {article.title}
-                        <LuExternalLink className="text-[13px] text-[#444444] group-hover:text-white/40 shrink-0 mt-1
-                        opacity-0 group-hover:opacity-100 transition-all duration-200" />
+
+                        <LuExternalLink
+                            className="text-[13px] text-[#444444] group-hover:text-white/40 shrink-0 mt-1
+                            opacity-0 group-hover:opacity-100 transition-all duration-200"
+                        />
                     </h2>
 
                     <p className="mt-2 text-[13px] text-[#555555] leading-relaxed line-clamp-2 group-hover:text-[#777777] transition-colors duration-200">

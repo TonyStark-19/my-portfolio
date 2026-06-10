@@ -6,8 +6,10 @@ export default function PhilosophyCard({ icon: Icon, title, description, iconCol
             hover:shadow-[0_0_20px_rgba(59,130,246,0.1)] transition-all duration-300 group h-full"
         >
             {/* Tag */}
-            <span className="absolute top-4 right-4 text-[10px] font-mono uppercase tracking-widest
-            px-2 py-1 rounded-md bg-white/5 text-white/40 border border-white/8">
+            <span
+                className="absolute top-4 right-4 text-[10px] font-mono uppercase tracking-widest px-2 py-1 rounded-md bg-white/5 
+                text-white/40 border border-white/8"
+            >
                 {tag}
             </span>
 

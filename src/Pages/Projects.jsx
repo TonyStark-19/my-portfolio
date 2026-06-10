@@ -11,6 +11,7 @@ const STREAK_START = Date.UTC(2024, 6, 9);
 // import icons
 import { LuLayers, LuDatabase, LuCode, LuFolderCode, LuBriefcase, LuBookOpen, LuServer } from "react-icons/lu";
 
+// community projects data
 const COMMUINITY_PROJECTS = [
     {
         title: "DevStash",
@@ -131,7 +132,7 @@ export default function Projects() {
     return (
         <div className="w-full min-h-screen bg-[#0a0a0a] text-white p-6 lg:p-16 max-lg:pt-28">
             <div className="max-w-4xl mx-auto">
-                {/* ── Personal Projects ── */}
+                {/* ── Community Projects ── */}
                 <div className="mb-20">
                     <SectionHeader
                         label="Community"

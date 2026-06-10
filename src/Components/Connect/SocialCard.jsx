@@ -12,8 +12,10 @@ export default function SocialCard({ social }) {
             className={`group flex items-center justify-between px-4 py-3.5 rounded-xl bg-white/2border border-white/6 transition-all duration-200 ${social.accent}`}
         >
             <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-white/4 border border-white/[0.07] flex items-center justify-center
-                text-[#666666] group-hover:text-white transition-colors duration-200">
+                <div
+                    className="w-8 h-8 rounded-lg bg-white/4 border border-white/[0.07] flex items-center justify-center
+                    text-[#666666] group-hover:text-white transition-colors duration-200"
+                >
                     <Icon size={14} />
                 </div>
 
@@ -25,7 +27,11 @@ export default function SocialCard({ social }) {
                 </div>
             </div>
 
-            <LuExternalLink size={12} className="text-[#2a2a2a] group-hover:text-[#666666] transition-colors duration-200" />
+            {/* external link icon */}
+            <LuExternalLink
+                size={12}
+                className="text-[#2a2a2a] group-hover:text-[#666666] transition-colors duration-200"
+            />
         </a>
     );
 }

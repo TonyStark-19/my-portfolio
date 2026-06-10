@@ -7,8 +7,10 @@ import TechTag from "./TechTag";
 // freelance project card component
 export default function FreelanceCard({ project }) {
     return (
-        <div className="group bg-white/2 border border-amber-400/8 rounded-2xl overflow-hidden flex flex-col
-        hover:bg-white/4 hover:border-amber-400/18 transition-all duration-300">
+        <div
+            className="group bg-white/2 border border-amber-400/8 rounded-2xl overflow-hidden flex flex-col
+            hover:bg-white/4 hover:border-amber-400/18 transition-all duration-300"
+        >
             {/* Thumbnail */}
             <div className="relative aspect-video overflow-hidden bg-[#111111]">
                 <img
@@ -23,8 +25,10 @@ export default function FreelanceCard({ project }) {
 
                 {/* Freelance badge on image */}
                 <div className="absolute top-3 left-3">
-                    <span className="flex items-center gap-1.5 text-[10px] font-mono tracking-widest uppercase
-                        px-2.5 py-1 rounded-full bg-amber-400/15 border border-amber-400/25 text-amber-400">
+                    <span
+                        className="flex items-center gap-1.5 text-[10px] font-mono tracking-widest uppercase
+                        px-2.5 py-1 rounded-full bg-amber-400/15 border border-amber-400/25 text-amber-400"
+                    >
                         <LuBriefcase size={9} />
                         Freelance
                     </span>
@@ -67,7 +71,10 @@ export default function FreelanceCard({ project }) {
 
                 <div className="flex flex-wrap gap-2 mt-auto pt-1">
                     {project.tech.map((t) => (
-                        <TechTag key={t} label={t} />
+                        <TechTag
+                            key={t}
+                            label={t}
+                        />
                     ))}
                 </div>
             </div>

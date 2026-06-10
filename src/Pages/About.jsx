@@ -76,7 +76,6 @@ export default function About() {
 
                 {/* Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 items-stretch">
-
                     {/* Left */}
                     <div className="lg:col-span-2 flex flex-col gap-4 h-full">
                         <div className="relative group rounded-2xl h-full min-h-105 overflow-hidden border border-white/6 aspect-3/4">
@@ -100,9 +99,14 @@ export default function About() {
                             </div>
                         </div>
 
-                        <Link to="/connect" className="group">
-                            <div className="flex items-center justify-between p-6 rounded-2xl bg-blue-600/90
-                            hover:bg-blue-500 active:scale-[0.98] transition-all duration-200">
+                        <Link
+                            to="/connect"
+                            className="group"
+                        >
+                            <div
+                                className="flex items-center justify-between p-6 rounded-2xl bg-blue-600/90
+                                hover:bg-blue-500 active:scale-[0.98] transition-all duration-200"
+                            >
                                 <div>
                                     <h4 className="text-[15px] font-semibold text-white">
                                         Connect with me
@@ -127,12 +131,16 @@ export default function About() {
                             hover:border-blue-400/20 hover:bg-white/4 transition-all duration-300 group"
                         >
                             {/* Accent line */}
-                            <div className="absolute left-0 top-0 h-full w-0.5 bg-linear-to-b from-blue-400/0 via-blue-400/40 to-blue-400/0
-                            opacity-0 group-hover:opacity-100 transition-all duration-500" />
+                            <div
+                                className="absolute left-0 top-0 h-full w-0.5 bg-linear-to-b from-blue-400/0 via-blue-400/40 to-blue-400/0
+                                opacity-0 group-hover:opacity-100 transition-all duration-500"
+                            />
 
                             {/* Tag */}
-                            <span className="text-[10px] font-mono tracking-widest uppercase px-2.5 py-1 rounded-full bg-blue-500/10 border
-                            border-blue-500/20 text-blue-400 w-fit">
+                            <span
+                                className="text-[10px] font-mono tracking-widest uppercase px-2.5 py-1 rounded-full bg-blue-500/10 border
+                                border-blue-500/20 text-blue-400 w-fit"
+                            >
                                 Non-Stop Progress
                             </span>
 
@@ -163,8 +171,10 @@ export default function About() {
                             </div>
 
                             {/* Glow effect */}
-                            <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500
-                            bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.08),transparent_60%)] pointer-events-none" />
+                            <div
+                                className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500
+                                bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.08),transparent_60%)] pointer-events-none"
+                            />
 
                             {/* Decorative icon */}
                             <HiOutlineSparkles
@@ -182,6 +192,7 @@ export default function About() {
                                 iconColor="text-blue-400"
                                 tag="Mindset"
                             />
+
                             <PhilosophyCard
                                 icon={MdOutlineAutoFixHigh}
                                 title="Refined Craft"
@@ -201,6 +212,7 @@ export default function About() {
                         subtitle="BCA, Computer Science"
                         duration="Sep 2023 - Sep 2026"
                     />
+
                     <EducationCard
                         title="Happy Model School"
                         subtitle="XII, PCM • 85%"
@@ -212,11 +224,14 @@ export default function About() {
                 {/* Hobbies */}
                 <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
                     {HOBBIES.map((h) => (
-                        <HobbyCard key={h.title} {...h} />
+                        <HobbyCard
+                            key={h.title} {...h}
+                        />
                     ))}
                 </div>
             </div>
 
+            {/* footer */}
             <Footer />
         </div>
     );
