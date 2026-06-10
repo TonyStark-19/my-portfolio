@@ -9,10 +9,67 @@ import SectionHeader from "../Components/Projects/SectionHeader";
 const STREAK_START = Date.UTC(2024, 6, 9);
 
 // import icons
-import { LuLayers, LuDatabase, LuCode, LuFolderCode, LuBriefcase, LuBookOpen } from "react-icons/lu";
+import { LuLayers, LuDatabase, LuCode, LuFolderCode, LuBriefcase, LuBookOpen, LuServer } from "react-icons/lu";
+
+const COMMUINITY_PROJECTS = [
+    {
+        title: "DevStash",
+        summary: "A full-stack MERN application for developers to save, explore, and contribute favorite resources across multiple domains.",
+        tech: ["MongoDB", "Express", "React", "Node", "Tailwind"],
+        image: "/images/Projects/Community/DevStash.png",
+        live: "https://devstash-nine.vercel.app",
+        github: "https://github.com/TonyStark-19/DevStash",
+        icon: <LuLayers className="text-blue-400" />,
+    },
+    {
+        title: "LearnSQL",
+        summary: "Beginner-friendly, interactive SQL documentation focusing on clarity, real examples, and visual learning.",
+        tech: ["React JS", "Tailwind CSS", "React Router"],
+        image: "/images/Projects/Community/LearnSql.png",
+        live: "https://learn-sql-eight.vercel.app/",
+        github: "https://github.com/TonyStark-19/LearnSQL",
+        icon: <LuDatabase className="text-emerald-400" />,
+    },
+    {
+        title: "C-Coding Website",
+        summary: "Categorized C programs across three levels of complexity, transformed from a repo into a responsive React app.",
+        tech: ["React JS", "CSS", "C", "React Router", "Open-Source"],
+        image: "/images/Projects/Community/C-Coding.png",
+        live: "https://c-programming-six.vercel.app/",
+        github: "https://github.com/TonyStark-19/C-Coding",
+        icon: <LuFolderCode className="text-orange-400" />,
+    },
+    {
+        title: "JS Mini Projects",
+        summary: "A curated collection of HTML, CSS & JS projects built to sharpen front-end logic and UI/UX fundamentals.",
+        tech: ["JavaScript", "HTML5", "CSS3", "Open-Source"],
+        image: "/images/Projects/Community/HtmlCssJs.png",
+        live: "https://html-css-js-projects-five.vercel.app/",
+        github: "https://github.com/TonyStark-19/HTML-CSS-JS-Projects",
+        icon: <LuCode className="text-yellow-400" />,
+    },
+    {
+        title: "HTML/CSS UI Kits",
+        summary: "Showcasing multiple UI components, animations, and layouts built to strengthen pure CSS skills.",
+        tech: ["HTML5", "CSS3", "Animations", "Open-Source"],
+        image: "/images/Projects/Community/HtmlCss.png",
+        live: "https://html-css-projects-phi.vercel.app/",
+        github: "https://github.com/TonyStark-19/HTML-CSS-Projects",
+        icon: <LuLayers className="text-pink-400" />,
+    },
+];
 
 // project data
 const PERSONAL_PROJECTS = [
+    {
+        title: "DevLogs",
+        summary: "A deeply personalized, interactive digital engineering logbook featuring full-screen fluid sidebars, route-based markdown scraping for a dynamic real-time reference system, and responsive mobile-first navigation.",
+        tech: ["React", "TypeScript", "Tailwind CSS", "React Router"],
+        image: "/images/Projects/Side-Projects/DevLogs.png",
+        live: "https://devlogs-henna.vercel.app",
+        github: "https://github.com/TonyStark-19/DevLogs",
+        icon: <LuLayers className="text-emerald-400" />,
+    },
     {
         title: "Bookora",
         summary: "A full-stack book discovery platform featuring Google OAuth, live book search, personalized recommendations, wishlist management, cart functionality, and user activity tracking.",
@@ -23,54 +80,28 @@ const PERSONAL_PROJECTS = [
         icon: <LuBookOpen className="text-amber-400" />,
     },
     {
-        title: "DevStash",
-        summary: "A full-stack MERN application for developers to save, explore, and contribute favorite resources across multiple domains.",
-        tech: ["MongoDB", "Express", "React", "Node", "Tailwind"],
-        image: "/images/Projects/Side-Projects/DevStash.png",
-        live: "https://devstash-nine.vercel.app",
-        github: "https://github.com/TonyStark-19/DevStash",
-        icon: <LuLayers className="text-blue-400" />,
-    },
-    {
-        title: "LearnSQL",
-        summary: "Beginner-friendly, interactive SQL documentation focusing on clarity, real examples, and visual learning.",
+        title: "Quizify",
+        summary: "Responsive React + Tailwind interview quiz platform with multi-topic quizzes, instant scoring, answer review, and light/dark mode.",
         tech: ["React JS", "Tailwind CSS", "React Router"],
-        image: "/images/Projects/Side-Projects/LearnSql.png",
-        live: "https://learn-sql-eight.vercel.app/",
-        github: "https://github.com/TonyStark-19/LearnSQL",
-        icon: <LuDatabase className="text-emerald-400" />,
-    },
-    {
-        title: "C-Coding Website",
-        summary: "Categorized C programs across three levels of complexity, transformed from a repo into a responsive React app.",
-        tech: ["React JS", "CSS", "C", "React Router", "Open-Source"],
-        image: "/images/Projects/Side-Projects/C-Coding.png",
-        live: "https://c-programming-six.vercel.app/",
-        github: "https://github.com/TonyStark-19/C-Coding",
-        icon: <LuFolderCode className="text-orange-400" />,
-    },
-    {
-        title: "JS Mini Projects",
-        summary: "A curated collection of HTML, CSS & JS projects built to sharpen front-end logic and UI/UX fundamentals.",
-        tech: ["JavaScript", "HTML5", "CSS3", "Open-Source"],
-        image: "/images/Projects/Side-Projects/HtmlCssJs.png",
-        live: "https://html-css-js-projects-five.vercel.app/",
-        github: "https://github.com/TonyStark-19/HTML-CSS-JS-Projects",
-        icon: <LuCode className="text-yellow-400" />,
-    },
-    {
-        title: "HTML/CSS UI Kits",
-        summary: "Showcasing multiple UI components, animations, and layouts built to strengthen pure CSS skills.",
-        tech: ["HTML5", "CSS3", "Animations", "Open-Source"],
-        image: "/images/Projects/Side-Projects/HtmlCss.png",
-        live: "https://html-css-projects-phi.vercel.app/",
-        github: "https://github.com/TonyStark-19/HTML-CSS-Projects",
-        icon: <LuLayers className="text-pink-400" />,
+        image: "/images/Projects/Side-Projects/Quiz.png",
+        live: "https://quiz-app-drab-beta.vercel.app/",
+        github: "https://github.com/TonyStark-19/Quiz-app",
+        icon: <LuCode className="text-purple-400" />,
     },
 ];
 
 // freelance projects data
 const FREELANCE_PROJECTS = [
+    {
+        title: "Krutrim Insights Website",
+        client: "Krutrim Insights",
+        summary: "An interconnected full-stack Admin, Mentor, and Student portal infrastructure backed by robust serverless logic. Engineered an advanced cloud architecture featuring 16 database tables, 12 API Gateways, 29 API routes, 13 Lambda functions, and automated email workflows via AWS SES.",
+        tech: ["React.js", "Tailwind CSS", "AWS Lambda", "API Gateway", "Amazon S3", "AWS SES"],
+        image: "/images/Projects/Freelance/Krutrim.png",
+        live: "https://www.krutriminsights.com",
+        github: null,
+        icon: <LuServer className="text-blue-400" />,
+    },
     {
         title: "Cervine",
         client: "Cervine Home Loans",
@@ -103,6 +134,24 @@ export default function Projects() {
                 {/* ── Personal Projects ── */}
                 <div className="mb-20">
                     <SectionHeader
+                        label="Community"
+                        title="Open Source & Collaborative Projects"
+                        description="Global tools, group codebases, and open repositories I've contributed to or built for the developer community."
+                    />
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
+                        {COMMUINITY_PROJECTS.map((project) => (
+                            <ProjectCard
+                                key={project.title}
+                                project={project}
+                            />
+                        ))}
+                    </div>
+                </div>
+
+                {/* ── Personal Projects ── */}
+                <div className="mb-20">
+                    <SectionHeader
                         label="Personal"
                         title="Side Projects"
                         description="Things I built out of curiosity, to learn, or to solve a real problem."
@@ -110,7 +159,10 @@ export default function Projects() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
                         {PERSONAL_PROJECTS.map((project) => (
-                            <ProjectCard key={project.title} project={project} />
+                            <ProjectCard
+                                key={project.title}
+                                project={project}
+                            />
                         ))}
                     </div>
                 </div>
@@ -125,13 +177,16 @@ export default function Projects() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
                         {FREELANCE_PROJECTS.map((project) => (
-                            <FreelanceCard key={project.title} project={project} />
+                            <FreelanceCard
+                                key={project.title}
+                                project={project}
+                            />
                         ))}
                     </div>
                 </div>
-
             </div>
 
+            {/* footer */}
             <Footer />
         </div>
     );
