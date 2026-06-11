@@ -2,6 +2,7 @@
 import useDaysStreak from "../Components/Footer/useDaysStreak";
 import Footer from "../Components/Footer/Footer";
 import ArticleCard from "../Components/Articles/ArticleCard";
+import DevLogsButton from "../Components/Articles/DevLogsButton";
 
 // constants
 const STREAK_START = Date.UTC(2024, 6, 9);
@@ -61,36 +62,8 @@ export default function Articles() {
                     </p>
                 </div>
 
-                {/* DevLogs Standalone Logging Callout Block */}
-                <div
-                    className="mb-10 p-5 rounded-xl border border-zinc-900 bg-zinc-950/40 flex flex-col sm:flex-row sm:items-center justify-between 
-                    gap-4 transition-colors hover:border-zinc-800"
-                >
-                    <div className="space-y-1 max-w-xl">
-                        <div className="flex items-center gap-2">
-                            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-
-                            <h3 className="text-sm font-semibold tracking-tight text-zinc-200">
-                                Interactive Live Logs
-                            </h3>
-                        </div>
-
-                        <p className="text-xs text-zinc-400 leading-relaxed">
-                            While I publish polished articles on Medium, I maintain an independent, dedicated system specifically to break down my daily
-                            technical insights, internal shifts, and execution workflows in real time.
-                        </p>
-                    </div>
-
-                    <a
-                        href="https://devlogs-henna.vercel.app/"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="shrink-0 text-center text-xs font-mono px-4 py-2 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-100 
-                        hover:bg-zinc-800 hover:text-white transition-all duration-200 cursor-pointer"
-                    >
-                        Explore DevLogs &rarr;
-                    </a>
-                </div>
+                {/* DevLogs Link Button */}
+                <DevLogsButton />
 
                 {/* Article feed */}
                 <div className="space-y-4">
