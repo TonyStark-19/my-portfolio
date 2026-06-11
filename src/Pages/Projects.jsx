@@ -130,7 +130,15 @@ export default function Projects() {
     const daysStreak = useDaysStreak(STREAK_START);
 
     return (
-        <div className="w-full min-h-screen bg-[#0a0a0a] text-white p-6 lg:p-16 max-lg:pt-28">
+        <div className="w-full min-h-screen bg-[#0a0a0a] text-white p-6 lg:p-16 max-lg:pt-28"
+            style={{
+                backgroundImage: `
+                radial-gradient(circle at 25% 25%, rgba(255,255,255,0.08) 1px, transparent 1px),
+                radial-gradient(circle at 75% 75%, rgba(255,255,255,0.04) 1px, transparent 1px)`,
+                backgroundSize: '20px 20px',
+                imageRendering: 'pixelated',
+            }}
+        >
             <div className="max-w-4xl mx-auto">
                 {/* ── Community Projects ── */}
                 <div className="mb-20">

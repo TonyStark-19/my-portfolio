@@ -25,7 +25,15 @@ export default function Connect() {
     const daysStreak = useDaysStreak(STREAK_START);
 
     return (
-        <div className="w-full min-h-screen bg-[#0a0a0a] text-white p-6 lg:p-16 max-lg:pt-28">
+        <div className="w-full min-h-screen bg-[#0a0a0a] text-white p-6 lg:p-16 max-lg:pt-28"
+            style={{
+                backgroundImage: `
+                radial-gradient(circle at 25% 25%, rgba(255,255,255,0.08) 1px, transparent 1px),
+                radial-gradient(circle at 75% 75%, rgba(255,255,255,0.04) 1px, transparent 1px)`,
+                backgroundSize: '20px 20px',
+                imageRendering: 'pixelated',
+            }}
+        >
             <div className="max-w-4xl mx-auto">
                 {/* Header */}
                 <div className="mb-12">
@@ -64,7 +72,7 @@ export default function Connect() {
                 </div>
 
                 {/* Quote */}
-                <p className="mt-16 text-center text-[#222222] text-[13px] font-mono italic tracking-wide">
+                <p className="mt-16 text-center text-[#393939] text-[13px] font-mono italic tracking-wide">
                     "Your network is your net worth."
                 </p>
             </div>

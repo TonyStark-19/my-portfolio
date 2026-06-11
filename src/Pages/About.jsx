@@ -57,7 +57,15 @@ export default function About() {
     const animatedDays = useAnimatedNumber(daysStreak);
 
     return (
-        <div className="w-full min-h-screen bg-[#0a0a0a] text-white p-6 lg:p-16 max-lg:pt-28">
+        <div className="w-full min-h-screen bg-[#0a0a0a] text-white p-6 lg:p-16 max-lg:pt-28"
+            style={{
+                backgroundImage: `
+                radial-gradient(circle at 25% 25%, rgba(255,255,255,0.08) 1px, transparent 1px),
+                radial-gradient(circle at 75% 75%, rgba(255,255,255,0.04) 1px, transparent 1px)`,
+                backgroundSize: '20px 20px',
+                imageRendering: 'pixelated',
+            }}
+        >
             <div className="max-w-4xl mx-auto">
                 {/* Header */}
                 <div className="mb-12">
@@ -148,7 +156,7 @@ export default function About() {
                             <div>
                                 <div className="flex items-baseline gap-3">
                                     <span
-                                        className="text-[72px] md:text-[88px] font-black leading-none tracking-tighter group-hover:text-blue-400
+                                        className="text-[72px] md:text-[88px] font-bold leading-none tracking-tighter group-hover:text-blue-400
                                         transition-colors duration-300"
                                     >
                                         {animatedDays}

@@ -11,7 +11,7 @@ export default function Footer() {
     const daysStreak = useDaysStreak(STREAK_START);
 
     return (
-        <footer className="w-full border-t border-white/4 bg-[#0a0a0a] mt-20">
+        <footer className="w-full border-t border-white/4 mt-20">
             <div className="max-w-7xl mx-auto px-6 pt-4 flex flex-col sm:flex-row items-center justify-between gap-3">
                 {/* Copyright */}
                 <p className="text-[12px] text-[#3a3a3a] tracking-wide">

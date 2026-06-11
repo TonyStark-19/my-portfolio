@@ -55,7 +55,7 @@ export default function Intro() {
                     </p>
 
                     <h1
-                        className="text-[13vw] sm:text-[80px] md:text-[96px] font-bold tracking-tighter leading-none
+                        className="text-[13vw] sm:text-[80px] md:text-[92px] font-semibold tracking-tighter leading-none
                         bg-linear-to-r from-white via-white/80 to-white/25 bg-clip-text text-transparent"
                     >
                         Aditya Chandel
