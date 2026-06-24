@@ -19,6 +19,7 @@ const SKILL_SECTIONS = [
             { img: "/images/Skills/JavaScript.png", label: "JavaScript" },
         ],
     },
+
     {
         title: "Backend & Cloud",
         skills: [
@@ -32,8 +33,9 @@ const SKILL_SECTIONS = [
             { img: "/images/Skills/AWS.png", label: "AWS" },
         ],
     },
+
     {
-        title: "Data Science & AI/ML",
+        title: "AI, Data Science & Analytics",
         skills: [
             { img: "/images/Skills/Python.png", label: "Python" },
             { img: "/images/Skills/NumPy.png", label: "NumPy" },
@@ -45,14 +47,24 @@ const SKILL_SECTIONS = [
             { img: "/images/Skills/Jupyter.png", label: "Jupyter Notebook" },
         ],
     },
+
     {
-        title: "Languages, Tools & Platforms",
+        title: "DevOps & Automation",
+        skills: [
+            { img: "/images/Skills/Docker.png", label: "Docker" },
+            { img: "/images/Skills/n8n.png", label: "n8n" },
+            { img: "/images/Skills/Make.png", label: "Make" },
+            { img: "/images/Skills/Git.png", label: "Git" },
+            { img: "/images/Skills/GitHub.png", label: "GitHub" },
+        ],
+    },
+
+    {
+        title: "Programming Languages & Tools",
         skills: [
             { img: "/images/Skills/Java.png", label: "Java" },
             { img: "/images/Skills/C.png", label: "C" },
             { img: "/images/Skills/Cpp.png", label: "C++" },
-            { img: "/images/Skills/Git.png", label: "Git" },
-            { img: "/images/Skills/GitHub.png", label: "GitHub" },
             { img: "/images/Skills/VS.png", label: "VS Code" },
         ],
     },
