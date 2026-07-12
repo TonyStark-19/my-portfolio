@@ -9,6 +9,7 @@ const SKILL_SECTIONS = [
         title: "Frontend Development",
         skills: [
             { img: "/images/Skills/React.png", label: "React" },
+            { img: "/images/Skills/Redux.png", label: "Redux" },
             { img: "/images/Skills/React.png", label: "React Native" },
             { img: "/images/Skills/Tailwind.png", label: "Tailwind CSS" },
             { img: "/images/Skills/Bootstrap.png", label: "Bootstrap" },
