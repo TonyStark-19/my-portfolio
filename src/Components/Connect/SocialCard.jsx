@@ -4,6 +4,7 @@ import { LuExternalLink } from "react-icons/lu";
 // social card component for connect page
 export default function SocialCard({ social }) {
     const Icon = social.icon;
+
     return (
         <a
             href={social.url}

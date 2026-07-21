@@ -9,7 +9,7 @@ export default function StreakStat({ days }) {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-60" />
                 <span className="relative rounded-full h-1.5 w-1.5 bg-blue-400" />
             </span>
-            
+
             {days} days
         </span>
     );

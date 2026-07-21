@@ -13,11 +13,41 @@ const EMAIL = "adityaatwork20@email.com";
 
 // socials data
 const SOCIALS = [
-    { name: "LinkedIn", handle: "@aditya-chandel-dev", icon: FaLinkedinIn, url: "https://www.linkedin.com/in/aditya-chandel-dev", accent: "hover:border-[#0077B5]/40 hover:bg-[#0077B5]/[0.06]" },
-    { name: "GitHub", handle: "@TonyStark-19", icon: FaGithub, url: "https://github.com/TonyStark-19", accent: "hover:border-white/[0.15] hover:bg-white/[0.04]" },
-    { name: "Twitter", handle: "@iamaditya_3", icon: FaTwitter, url: "https://twitter.com/iamaditya_3", accent: "hover:border-[#1DA1F2]/40 hover:bg-[#1DA1F2]/[0.06]" },
-    { name: "Medium", handle: "@adityachandel371", icon: FaMediumM, url: "https://medium.com/@adityachandel371", accent: "hover:border-[#00AB6C]/40 hover:bg-[#00AB6C]/[0.06]" },
-    { name: "Instagram", handle: "@aaditya_ch124", icon: FaInstagram, url: "https://instagram.com/aaditya_ch124", accent: "hover:border-[#E4405F]/40 hover:bg-[#E4405F]/[0.06]" },
+    {
+        name: "LinkedIn",
+        handle: "@aditya-chandel-dev",
+        icon: FaLinkedinIn,
+        url: "https://www.linkedin.com/in/aditya-chandel-dev",
+        accent: "hover:border-[#0077B5]/40 hover:bg-[#0077B5]/[0.06]"
+    },
+    {
+        name: "GitHub",
+        handle: "@TonyStark-19",
+        icon: FaGithub,
+        url: "https://github.com/TonyStark-19",
+        accent: "hover:border-white/[0.15] hover:bg-white/[0.04]"
+    },
+    {
+        name: "Twitter",
+        handle: "@iamaditya_3",
+        icon: FaTwitter,
+        url: "https://twitter.com/iamaditya_3",
+        accent: "hover:border-[#1DA1F2]/40 hover:bg-[#1DA1F2]/[0.06]"
+    },
+    {
+        name: "Medium",
+        handle: "@adityachandel371",
+        icon: FaMediumM,
+        url: "https://medium.com/@adityachandel371",
+        accent: "hover:border-[#00AB6C]/40 hover:bg-[#00AB6C]/[0.06]"
+    },
+    {
+        name: "Instagram",
+        handle: "@aaditya_ch124",
+        icon: FaInstagram,
+        url: "https://instagram.com/aaditya_ch124",
+        accent: "hover:border-[#E4405F]/40 hover:bg-[#E4405F]/[0.06]"
+    },
 ];
 
 // connect page
