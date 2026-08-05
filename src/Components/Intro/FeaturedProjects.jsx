@@ -1,5 +1,5 @@
 // import icons
-import { LuArrowRight, LuLayers, LuDatabase } from "react-icons/lu";
+import { LuArrowRight, LuLayers, LuDatabase, LuBookOpen } from "react-icons/lu";
 
 // import link
 import { Link } from "react-router-dom";
@@ -10,6 +10,15 @@ import ProjectCard from "./ProjectCard";
 // featured projects data
 const FEATURED_PROJECTS = [
     {
+        title: "OpenSetup",
+        summary: "A full-stack community platform for discovering, contributing, and requesting development setup guides with Markdown support and an admin approval workflow.",
+        image: "/images/Projects/Community/OpenSetup.png",
+        live: "https://open-setup.vercel.app/",
+        github: "https://github.com/TonyStark-19/OpenSetup",
+        icon: <LuBookOpen className="text-emerald-400" />,
+        accent: "emerald",
+    },
+    {
         title: "DevStash",
         summary: "A full-stack MERN application for developers to save, explore, and contribute favorite resources across multiple domains.",
         image: "/images/Projects/Community/DevStash.png",
@@ -17,15 +26,6 @@ const FEATURED_PROJECTS = [
         github: "https://github.com/TonyStark-19/DevStash",
         icon: <LuLayers className="text-blue-400" />,
         accent: "blue",
-    },
-    {
-        title: "LearnSQL",
-        summary: "Beginner-friendly, interactive SQL documentation focusing on clarity, real examples, and visual learning.",
-        image: "/images/Projects/Community/LearnSql.png",
-        live: "https://learn-sql-eight.vercel.app/",
-        github: "https://github.com/TonyStark-19/LearnSQL",
-        icon: <LuDatabase className="text-emerald-400" />,
-        accent: "emerald",
     },
 ];
 

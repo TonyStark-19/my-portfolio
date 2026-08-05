@@ -9,10 +9,19 @@ import SectionHeader from "../Components/Projects/SectionHeader";
 const STREAK_START = Date.UTC(2024, 6, 9);
 
 // import icons
-import { LuLayers, LuDatabase, LuCode, LuFolderCode, LuBriefcase, LuBookOpen, LuServer } from "react-icons/lu";
+import { LuLayers, LuDatabase, LuCode, LuFolderCode, LuBriefcase, LuBookOpen, LuServer, LuLeaf } from "react-icons/lu";
 
 // community projects data
 const COMMUINITY_PROJECTS = [
+    {
+        title: "OpenSetup",
+        summary: "A full-stack community platform where developers can discover, contribute, and request development setup guides with Markdown support and an admin approval workflow.",
+        tech: ["React", "TypeScript", "Node", "Express", "MongoDB", "AWS", "Tailwind CSS"],
+        image: "/images/Projects/Community/OpenSetup.png",
+        live: "https://open-setup.vercel.app/",
+        github: "https://github.com/TonyStark-19/OpenSetup",
+        icon: <LuBookOpen className="text-emerald-400" />,
+    },
     {
         title: "DevStash",
         summary: "A full-stack MERN application for developers to save, explore, and contribute favorite resources across multiple domains.",
@@ -79,6 +88,15 @@ const PERSONAL_PROJECTS = [
         live: "https://bookora-hazel.vercel.app",
         github: "https://github.com/TonyStark-19/Bookora",
         icon: <LuBookOpen className="text-amber-400" />,
+    },
+    {
+        title: "Planto",
+        summary: "A modern premium plant e-commerce landing page featuring elegant animations, glassmorphism-inspired UI, product showcases, customer testimonials, and a fully responsive shopping experience.",
+        tech: ["React", "TypeScript", "Tailwind CSS", "Vite", "AOS"],
+        image: "/images/Projects/Side-Projects/Planto.png",
+        live: "https://planto-snowy.vercel.app/",
+        github: "https://github.com/TonyStark-19/Planto",
+        icon: <LuLeaf className="text-green-400" />,
     },
     {
         title: "Quizify",
