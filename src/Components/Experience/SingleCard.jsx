@@ -3,7 +3,7 @@ import TimelineNode from "./TimelineNode";
 import RoleEntry from "./RoleEntry";
 import CompanyLogo from "./CompanyLogo";
 
-// Card for a single experience (no progression)
+// Card for a single experience
 export default function SingleCard({ exp }) {
     return (
         <div className="mb-14 last:mb-0 relative pl-10 md:pl-14 group">

@@ -16,9 +16,8 @@ export default function ProjectCard({ project }) {
                 <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover object-top opacity-75 grayscale-[0.3]
-                    group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-[1.03]
-                    transition-all duration-500"
+                    className="w-full h-full object-cover object-top opacity-75 grayscale-[0.3] group-hover:opacity-100 group-hover:grayscale-0 
+                    group-hover:scale-[1.03] transition-all duration-500"
                 />
 
                 <div className="absolute inset-0 bg-linear-to-t from-[#0a0a0a] via-transparent to-transparent" />
@@ -27,7 +26,7 @@ export default function ProjectCard({ project }) {
             {/* Body */}
             <div className="p-6 flex-1 flex flex-col gap-4">
                 {/* Title row */}
-                <div className="flex items-start justify-between gap-4">
+                <div className="flex items-center justify-between gap-4">
                     <div className="flex items-center gap-3">
                         <span className="text-[18px]">{project.icon}</span>
 

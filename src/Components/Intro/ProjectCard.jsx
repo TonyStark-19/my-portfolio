@@ -4,6 +4,7 @@ import { GoLinkExternal } from "react-icons/go";
 
 // project card component for featured projects section
 export default function ProjectCard({ project }) {
+    // determine accent hover color based on project accent
     const accentHover = project.accent === "blue"
         ? "hover:border-blue-500/30"
         : "hover:border-emerald-500/30";

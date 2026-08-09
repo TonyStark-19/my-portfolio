@@ -13,7 +13,7 @@ export default function Consistency({ daysStreak, GITHUB_USERNAME, GITHUB_THEME 
                 </h4>
             </div>
 
-            <p className="text-[#555555] text-[15px] leading-relaxed max-w-2xl">
+            <p className="text-[#555555] text-[15px] leading-6 max-w-3xl">
                 I believe in the power of marginal gains — becoming{" "}
                 <span className="text-white/70">1% better every single day</span>.
                 This discipline led me to consistently share my progress on LinkedIn for{" "}

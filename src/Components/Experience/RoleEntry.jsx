@@ -3,7 +3,7 @@ import MetaInfo from "./MetaInfo";
 import Badge from "./Badge";
 import DescriptionCard from "./DescriptionCard";
 
-// Single role entry (used inside both single and progression cards)
+// Single role entry
 export default function RoleEntry({ role, company_label, badge, duration, location, description, skills, isPromotion, isLast }) {
     return (
         <div className={`relative ${!isLast ? "pb-0" : ""}`}>

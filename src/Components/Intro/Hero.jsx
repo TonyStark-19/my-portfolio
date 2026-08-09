@@ -21,7 +21,7 @@ export default function Hero({ TYPING_PHRASES }) {
             </p>
 
             <h1
-                className="text-[13vw] sm:text-[80px] md:text-[92px] font-semibold tracking-tighter leading-none
+                className="text-[12vw] sm:text-[80px] md:text-[92px] font-semibold tracking-tighter leading-none
                 bg-linear-to-r from-white via-white/80 to-white/25 bg-clip-text text-transparent"
             >
                 Aditya Chandel
@@ -31,7 +31,7 @@ export default function Hero({ TYPING_PHRASES }) {
                 <TypingText phrases={TYPING_PHRASES} />
             </div>
 
-            <p className="mt-8 text-[#666666] text-[16px] max-w-xl leading-relaxed">
+            <p className="mt-8 text-[#666666] text-[16px] max-w-2xl leading-relaxed">
                 I love{" "}
                 <span className="text-white/90">building, improving, and contributing</span>{" "}
                 to digital projects that challenge me. Coding is how I{" "}
@@ -46,7 +46,7 @@ export default function Hero({ TYPING_PHRASES }) {
                 >
                     <button
                         className="flex items-center justify-center gap-2 bg-white text-black px-7 py-3 rounded-xl text-[14px] font-semibold
-                        hover:bg-blue-400 hover:text-white active:scale-[0.97] transition-all duration-200 w-full group cursor-pointer"
+                        hover:bg-blue-500 hover:text-white active:scale-[0.97] transition-all duration-200 w-full group cursor-pointer"
                     >
                         View Projects
                         <LuArrowRight className="group-hover:translate-x-0.5 transition-transform duration-200" />

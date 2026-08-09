@@ -2,7 +2,7 @@
 export default function StreakStat({ days }) {
     return (
         <span
-            className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20
+            className="inline-flex items-center gap-1.5 px-2.5 py-0.2 rounded-full bg-blue-500/10 border border-blue-500/20
             text-blue-400 font-semibold text-[15px]"
         >
             <span className="relative flex h-1.5 w-1.5">

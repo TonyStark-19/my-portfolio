@@ -4,7 +4,7 @@ import { GitHubCalendar } from "react-github-calendar";
 // import icons
 import { LuGithub } from "react-icons/lu";
 
-// github calendar card component for intro page
+// github calendar card component
 export default function GitHubCard({ username, theme }) {
     return (
         <div className="mt-10 p-7 bg-white/2 border border-white/6 rounded-2xl max-w-5xl">

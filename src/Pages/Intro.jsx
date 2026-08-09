@@ -35,7 +35,7 @@ export default function Intro() {
                 <div className="absolute bottom-0 left-0 right-0 h-40 bg-linear-to-t from-[#0a0a0a] to-transparent" />
             </div>
 
-            <div className="max-w-5xl mx-auto relative z-10 w-full flex-1 p-10 lg:p-20 max-lg:pt-28 max-[500px]:p-5 flex flex-col justify-center">
+            <div className="max-w-6xl mx-auto relative z-10 w-full flex-1 p-10 lg:p-20 max-lg:pt-28 max-[500px]:p-5 flex flex-col justify-center">
                 {/* ── Hero ── */}
                 <Hero TYPING_PHRASES={TYPING_PHRASES} />
 

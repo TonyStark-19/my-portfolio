@@ -47,7 +47,7 @@ export default function EmailCard({ email }) {
                 <a
                     href={`mailto:${email}`}
                     className="flex items-center justify-center gap-2 bg-white text-black px-6 py-2.5 rounded-xl text-[13px] font-semibold
-                    hover:bg-blue-400 hover:text-white active:scale-[0.97] transition-all duration-200 flex-1"
+                    hover:bg-blue-500 hover:text-white active:scale-[0.97] transition-all duration-200 flex-1"
                 >
                     <LuSend size={13} /> Send Email
                 </a>

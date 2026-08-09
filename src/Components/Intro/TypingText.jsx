@@ -8,6 +8,7 @@ export default function TypingText({ phrases }) {
     const [charIdx, setCharIdx] = useState(0);
     const [deleting, setDeleting] = useState(false);
 
+    // useEffect hook to handle typing and deleting animation
     useEffect(() => {
         const current = phrases[phraseIdx];
 

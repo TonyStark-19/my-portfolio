@@ -1,7 +1,10 @@
 // import components
 import SkillTag from "./SkillTag";
 
-// description card for experience entries, showing role description and skills used
+// import icons
+import { TbPointFilled } from "react-icons/tb";
+
+// description card
 export default function DescriptionCard({ description, skills }) {
     return (
         <div className="bg-white/2 border border-white/5 p-5 rounded-xl group-hover:border-white/10 transition-all duration-500">
@@ -9,9 +12,13 @@ export default function DescriptionCard({ description, skills }) {
                 {description.map((item, i) => (
                     <li
                         key={i}
-                        className="text-[#555555] group-hover:text-[#777777] leading-relaxed text-[13px] flex gap-3 transition-colors duration-300"
+                        className="text-[#555555] group-hover:text-[#777777] leading-relaxed text-[13px] flex gap-3 transition-colors duration-300
+                        flex-row justify-start items-center"
                     >
-                        <span className="text-blue-500/40 mt-0.5 shrink-0">▸</span>
+                        <span className="text-blue-500/40 shrink-0 max-sm:hidden">
+                            <TbPointFilled />
+                        </span>
+
                         {item}
                     </li>
                 ))}

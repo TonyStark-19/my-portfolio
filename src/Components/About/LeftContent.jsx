@@ -35,7 +35,7 @@ export default function LeftContent() {
             >
                 <div
                     className="flex items-center justify-between p-6 rounded-2xl bg-blue-600/90
-                    hover:bg-blue-500 active:scale-[0.98] transition-all duration-200"
+                    hover:bg-blue-700 active:scale-[0.98] transition-all duration-200"
                 >
                     <div>
                         <h4 className="text-[15px] font-semibold text-white">

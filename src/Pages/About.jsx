@@ -44,7 +44,7 @@ const HOBBIES = [
     {
         icon: FaQuoteLeft,
         title: "Wit",
-        desc: "Articles & Humor",
+        desc: "Writing & Humor",
         color: "text-emerald-400",
         bg: "bg-emerald-400/10",
         border: "hover:border-emerald-400/20",
@@ -60,13 +60,13 @@ export default function About() {
         <div className="w-full min-h-screen bg-[#0a0a0a] text-white p-6 lg:p-16 max-lg:pt-28"
             style={{
                 backgroundImage: `
-                radial-gradient(circle at 25% 25%, rgba(255,255,255,0.08) 1px, transparent 1px),
+                radial-gradient(circle at 25% 25%, rgba(255,255,255,0.04) 1px, transparent 1px),
                 radial-gradient(circle at 75% 75%, rgba(255,255,255,0.04) 1px, transparent 1px)`,
                 backgroundSize: '20px 20px',
                 imageRendering: 'pixelated',
             }}
         >
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-5xl mx-auto">
                 {/* Header */}
                 <div className="mb-12">
                     <p className="text-blue-400 font-mono tracking-[0.2em] uppercase text-[11px] mb-3">
@@ -83,7 +83,7 @@ export default function About() {
                 </div>
 
                 {/* Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 items-stretch">
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-4 items-stretch">
                     {/* Left */}
                     <LeftContent />
 
@@ -96,7 +96,7 @@ export default function About() {
                     <EducationCard
                         title="HRIST College"
                         subtitle="BCA, Computer Science"
-                        duration="Sep 2023 - Sep 2026"
+                        duration="Sep 2023 - May 2026"
                     />
 
                     <EducationCard

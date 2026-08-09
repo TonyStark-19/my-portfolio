@@ -10,7 +10,7 @@ export default function SocialCard({ social }) {
             href={social.url}
             target="_blank"
             rel="noopener noreferrer"
-            className={`group flex items-center justify-between px-4 py-3.5 rounded-xl bg-white/2border border-white/6 transition-all duration-200 ${social.accent}`}
+            className={`group flex items-center justify-between px-4 py-3.5 rounded-xl bg-white/2 border border-white/6 transition-all duration-200 ${social.accent}`}
         >
             <div className="flex items-center gap-3">
                 <div

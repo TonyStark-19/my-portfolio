@@ -5,6 +5,7 @@ import { useEffect, useRef } from "react";
 export default function ParticleBackground() {
     const canvasRef = useRef(null);
 
+    // useEffect hook to handle canvas drawing and resizing
     useEffect(() => {
         const canvas = canvasRef.current;
         const ctx = canvas.getContext("2d");

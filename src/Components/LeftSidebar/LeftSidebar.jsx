@@ -44,10 +44,12 @@ export default function LeftSidebar({ isOpen, setIsOpen }) {
             {/* Mobile header */}
             <div className="lg:hidden flex items-center justify-between px-5 py-3.5 border-b border-white/5">
                 <div className="flex items-center gap-2.5">
-                    {/* Monogram */}
-                    <div className="w-8 h-8 rounded-lg bg-white/6 border border-white/6 flex items-center justify-center">
-                        <span className="text-[12px] font-semibold text-white/70 tracking-tight">AC</span>
-                    </div>
+                    {/* Logo */}
+                    <img
+                        src="/images/Other/profile.jpg"
+                        alt="profile"
+                        className="w-7 h-7 rounded-full"
+                    />
 
                     <span className="text-[16px] font-semibold text-white/90 tracking-wide">
                         Aditya Chandel
@@ -56,7 +58,8 @@ export default function LeftSidebar({ isOpen, setIsOpen }) {
 
                 <button
                     onClick={() => setIsOpen(false)}
-                    className="p-1.5 rounded-lg bg-white/5 hover:bg-white/8 text-[#888888] hover:text-white transition-all duration-150"
+                    className="flex items-center justify-center w-9 h-9 rounded-lg bg-white/4 border border-white/[0.07] text-[#777777] hover:text-white
+                    hover:bg-white/8 hover:border-white/12 active:scale-95 transition-all duration-150"
                 >
                     <LuX className="text-[18px]" />
                 </button>

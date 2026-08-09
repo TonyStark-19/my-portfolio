@@ -16,9 +16,8 @@ export default function FreelanceCard({ project }) {
                 <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover object-top opacity-75 grayscale-[0.3]
-                    group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-[1.03]
-                    transition-all duration-500"
+                    className="w-full h-full object-cover object-top opacity-75 grayscale-[0.3] group-hover:opacity-100 group-hover:grayscale-0 
+                    group-hover:scale-[1.03] transition-all duration-500"
                 />
 
                 <div className="absolute inset-0 bg-linear-to-t from-[#0a0a0a] via-transparent to-transparent" />
