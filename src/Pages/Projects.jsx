@@ -112,6 +112,16 @@ const PERSONAL_PROJECTS = [
 // freelance projects data
 const FREELANCE_PROJECTS = [
     {
+        title: "PrinceEdits",
+        client: "Prince Pal",
+        summary: "Video editor portfolio website created for Prince Pal, featuring a modern visual design, smooth animations, and responsive layouts to showcase his video editing work and creative projects.",
+        tech: ["React", "Tailwind CSS", "Framer Motion"],
+        image: "/images/Projects/Freelance/PrinceEdits.png",
+        live: "https://prince-edits.vercel.app/",
+        github: null,
+        icon: <LuLayers className="text-amber-400" />,
+    },
+    {
         title: "Krutrim Insights Website",
         client: "Krutrim Insights",
         summary: "An interconnected full-stack Admin, Mentor, and Student portal infrastructure backed by robust serverless logic. Engineered an advanced cloud architecture featuring 16 database tables, 12 API Gateways, 29 API routes, 13 Lambda functions, and automated email workflows via AWS SES.",
